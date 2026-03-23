@@ -7,6 +7,7 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/luisr-santos/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://luis-santos96.github.io"><img src="https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio"/></a>
   <a href="mailto:luisricardo--96@hotmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email"/></a>
 </p>
 
@@ -56,25 +57,25 @@
 <table>
   <tr>
     <td align="center" width="50%">
-      <a href="https://github.com/Luis-Santos96/pyspark-pipeline-patterns">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=pyspark-pipeline-patterns&theme=tokyonight&hide_border=true" />
+      <a href="https://github.com/Luis-Santos96/spark-data-quality-checker">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=spark-data-quality-checker&theme=tokyonight&hide_border=true" />
       </a>
     </td>
     <td align="center" width="50%">
-      <a href="https://github.com/Luis-Santos96/databricks-refactoring-toolkit">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=databricks-refactoring-toolkit&theme=tokyonight&hide_border=true" />
+      <a href="https://github.com/Luis-Santos96/databricks-cert-notes">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=databricks-cert-notes&theme=tokyonight&hide_border=true" />
       </a>
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <a href="https://github.com/Luis-Santos96/delta-lake-scd-framework">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=delta-lake-scd-framework&theme=tokyonight&hide_border=true" />
+      <a href="https://github.com/Luis-Santos96/ai-agents-playground">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=ai-agents-playground&theme=tokyonight&hide_border=true" />
       </a>
     </td>
     <td align="center" width="50%">
-      <a href="https://github.com/Luis-Santos96/portfolio">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=portfolio&theme=tokyonight&hide_border=true" />
+      <a href="https://luis-santos96.github.io">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=luis-santos96.github.io&theme=tokyonight&hide_border=true" />
       </a>
     </td>
   </tr>
@@ -86,7 +87,6 @@
 
 - 📚 Preparing for **Databricks Certified Data Engineer Associate** (target: June 2026)
 - 🤖 Exploring **AI agent orchestration** with Claude Code + Ruflo
-- 🏗️ Building this GitHub profile & portfolio from the ground up
 
 ---
 
