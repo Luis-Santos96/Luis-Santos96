@@ -2,7 +2,7 @@
 
 <p align="center">
   <strong>Data Engineer</strong> · 5+ years building data pipelines at enterprise scale<br>
-  📍 Porto, Portugal &nbsp;·&nbsp; 🏢 IWG &nbsp;·&nbsp; 🌍 120+ countries
+  📍 Porto, Portugal &nbsp;·&nbsp; 🏢 IWG &nbsp;·&nbsp;
 </p>
 
 <p align="center">
