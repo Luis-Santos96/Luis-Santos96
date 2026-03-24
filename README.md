@@ -1,13 +1,13 @@
 <h1 align="center">Hey, I'm Luis Ricardo 👋</h1>
 
 <p align="center">
-  <strong>Data Engineer</strong> · Building scalable data pipelines at enterprise scale<br>
-  📍 Portugal &nbsp;·&nbsp; 🏢 IWG
+  <strong>Data Engineer</strong> · 5+ years building data pipelines at enterprise scale<br>
+  📍 Porto, Portugal &nbsp;·&nbsp; 🏢 IWG &nbsp;·&nbsp; 🌍 120+ countries
 </p>
 
 <p align="center">
+  <a href="https://luis-santos96.github.io"><img src="https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
   <a href="https://www.linkedin.com/in/luisr-santos/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://luis-santos96.github.io"><img src="https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio"/></a>
   <a href="mailto:luisricardo--96@hotmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email"/></a>
 </p>
 
@@ -23,6 +23,7 @@
   <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
   <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
   <img src="https://img.shields.io/badge/Data_Factory-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
+  <img src="https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
   <img src="https://img.shields.io/badge/CI/CD-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" />
 </p>
@@ -44,11 +45,7 @@
 
 ### 🔭 What I Do
 
-- Design and maintain **lakehouse architectures** on Databricks with Delta Lake
-- Build **multi-layer data pipelines** (raw → conform → curated → optimise) processing millions of rows
-- Refactor legacy pipelines for performance — routinely achieving **50-70% reduction** in compute and wall-clock time
-- Implement **SCD Type 1 & 2** patterns for slowly changing dimensions at scale
-- Diagnose production data issues end-to-end, from ingestion to reporting layer
+I design and maintain **lakehouse architectures** processing billions of rows across 120+ countries. My day-to-day involves building multi-layer data pipelines on **Databricks & Delta Lake**, refactoring legacy systems for performance (routinely achieving **50-70% compute reductions**), and implementing SCD patterns at enterprise scale. I've worked across **Energy, Telecom, Banking**, and global workspace industries — from NLP models at Accenture to production-grade platforms at IWG.
 
 ---
 
@@ -56,27 +53,51 @@
 
 <table>
   <tr>
-    <td align="center" width="50%">
-      <a href="https://github.com/Luis-Santos96/spark-data-quality-checker">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=spark-data-quality-checker&theme=tokyonight&hide_border=true" />
-      </a>
+    <td width="50%">
+      <h3 align="center">spark-data-quality-checker</h3>
+      <p align="center">
+        <a href="https://github.com/Luis-Santos96/spark-data-quality-checker">
+          <img src="https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" />
+          <img src="https://img.shields.io/badge/Delta_Lake-003366?style=flat-square" />
+          <img src="https://img.shields.io/badge/Status-In_Dev-f59e0b?style=flat-square" />
+        </a>
+      </p>
+      <p align="center">Open-source data quality validation tool for Databricks pipelines. Null detection, duplicate checking, schema drift monitoring with configurable thresholds.</p>
     </td>
-    <td align="center" width="50%">
-      <a href="https://github.com/Luis-Santos96/databricks-cert-notes">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=databricks-cert-notes&theme=tokyonight&hide_border=true" />
-      </a>
+    <td width="50%">
+      <h3 align="center">databricks-cert-notes</h3>
+      <p align="center">
+        <a href="https://github.com/Luis-Santos96/databricks-cert-notes">
+          <img src="https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white" />
+          <img src="https://img.shields.io/badge/Spark_SQL-E25A1C?style=flat-square" />
+          <img src="https://img.shields.io/badge/Target-June_2026-22c55e?style=flat-square" />
+        </a>
+      </p>
+      <p align="center">Structured study notes for the Databricks Data Engineer Associate certification. Organized by exam domain with key concepts and practice questions.</p>
     </td>
   </tr>
   <tr>
-    <td align="center" width="50%">
-      <a href="https://github.com/Luis-Santos96/ai-agents-playground">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=ai-agents-playground&theme=tokyonight&hide_border=true" />
-      </a>
+    <td width="50%">
+      <h3 align="center">ai-agents-playground</h3>
+      <p align="center">
+        <a href="https://github.com/Luis-Santos96/ai-agents-playground">
+          <img src="https://img.shields.io/badge/Claude_Code-000?style=flat-square" />
+          <img src="https://img.shields.io/badge/Ruflo-3b82f6?style=flat-square" />
+          <img src="https://img.shields.io/badge/MCP-22c55e?style=flat-square" />
+        </a>
+      </p>
+      <p align="center">Documenting my journey with AI agent orchestration — setup guides, experiment logs, and swarm configurations for multi-agent development workflows.</p>
     </td>
-    <td align="center" width="50%">
-      <a href="https://luis-santos96.github.io">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Luis-Santos96&repo=luis-santos96.github.io&theme=tokyonight&hide_border=true" />
-      </a>
+    <td width="50%">
+      <h3 align="center">portfolio</h3>
+      <p align="center">
+        <a href="https://luis-santos96.github.io">
+          <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" />
+          <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" />
+          <img src="https://img.shields.io/badge/Live-22c55e?style=flat-square" />
+        </a>
+      </p>
+      <p align="center">Personal portfolio with dark/light mode, typing animation, responsive design. No frameworks — vanilla HTML/CSS/JS deployed on GitHub Pages.</p>
     </td>
   </tr>
 </table>
