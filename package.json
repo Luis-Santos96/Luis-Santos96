@@ -1,0 +1,22 @@
+{
+  "name": "gamified-quiz-pwa",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "idb": "^8.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.3",
+    "vite-plugin-pwa": "^0.20.5"
+  }
+}

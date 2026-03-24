@@ -1,0 +1,2485 @@
+{
+  "meta": {
+    "title": "Databricks Certified Data Engineer Associate",
+    "questionCount": 159,
+    "examQuestions": 45,
+    "examMinutes": 90,
+    "domainWeights": {
+      "Lakehouse Platform": 24,
+      "ELT with Spark SQL and Python": 29,
+      "Incremental Data Processing": 22,
+      "Production Pipelines": 16,
+      "Data Governance": 9
+    }
+  },
+  "domains": [
+    {
+      "number": 1,
+      "name": "Lakehouse Platform",
+      "id": "lakehouse-platform",
+      "weight": 24
+    },
+    {
+      "number": 2,
+      "name": "ELT with Spark SQL and Python",
+      "id": "elt-with-spark-sql-and-python",
+      "weight": 29
+    },
+    {
+      "number": 3,
+      "name": "Incremental Data Processing",
+      "id": "incremental-data-processing",
+      "weight": 22
+    },
+    {
+      "number": 4,
+      "name": "Production Pipelines",
+      "id": "production-pipelines",
+      "weight": 16
+    },
+    {
+      "number": 5,
+      "name": "Data Governance",
+      "id": "data-governance",
+      "weight": 9
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following can be used to simplify and unify siloed data architectures that are specialized for specific use cases?",
+      "options": {
+        "A": "None of these",
+        "B": "Data lake",
+        "C": "Data warehouse",
+        "D": "All of these",
+        "E": "Data lakehouse"
+      },
+      "correct": "E",
+      "explanation": "The data lakehouse combines the flexibility of a data lake with the structure and governance of a data warehouse, unifying previously siloed architectures.",
+      "difficulty": 3
+    },
+    {
+      "id": 2,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following data lakehouse features results in improved data quality over a traditional data lake?",
+      "options": {
+        "A": "A data lakehouse provides storage solutions for structured and unstructured data.",
+        "B": "A data lakehouse supports ACID-compliant transactions.",
+        "C": "A data lakehouse allows the use of SQL queries to examine data.",
+        "D": "A data lakehouse stores data in open formats.",
+        "E": "A data lakehouse enables machine learning and artificial intelligence workloads."
+      },
+      "correct": "B",
+      "explanation": "ACID transactions are the core feature that improves data quality by ensuring consistency, reliability, and prevention of data corruption — something traditional data lakes lack.",
+      "difficulty": 3
+    },
+    {
+      "id": 3,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following benefits of using the Databricks Lakehouse Platform is provided by Delta Lake?",
+      "options": {
+        "A": "Manipulate data using various languages",
+        "B": "Real-time notebook collaboration",
+        "C": "Alert setup for query failures",
+        "D": "The ability to support batch and streaming workloads",
+        "E": "Distribute complex data operations"
+      },
+      "correct": "D",
+      "explanation": "Delta Lake enables unified batch and streaming workloads on the same table using the same APIs, which is a core Delta Lake benefit.",
+      "difficulty": 3
+    },
+    {
+      "id": 4,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following describes the storage organization of a Delta table?",
+      "options": {
+        "A": "Single file containing all elements",
+        "B": "Data in single file, metadata elsewhere",
+        "C": "Collection of files that contain data, history, metadata, and other attributes",
+        "D": "Collection containing only data",
+        "E": "Single file with only data"
+      },
+      "correct": "C",
+      "explanation": "A Delta table is stored as a collection of Parquet data files plus a _delta_log directory containing JSON and checkpoint files for transaction history and metadata.",
+      "difficulty": 3
+    },
+    {
+      "id": 5,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following is hosted completely in the control plane of the classic Databricks architecture?",
+      "options": {
+        "A": "Worker node",
+        "B": "JDBC data source",
+        "C": "Databricks web application",
+        "D": "Databricks Filesystem",
+        "E": "Driver node"
+      },
+      "correct": "C",
+      "explanation": "The Databricks web application (UI), cluster management, job scheduler, and notebook server all reside in the control plane (Databricks-managed cloud account). Compute (driver and worker nodes) and data live in the customer data plane.",
+      "difficulty": 3
+    },
+    {
+      "id": 6,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following is stored in the Databricks customer's cloud account?",
+      "options": {
+        "A": "Databricks web application",
+        "B": "Cluster management metadata",
+        "C": "Repos",
+        "D": "Data",
+        "E": "Notebooks"
+      },
+      "correct": "D",
+      "explanation": "In the classic architecture, the data plane (customer's cloud account) stores data files and runs compute. The control plane (Databricks account) stores notebooks, repos, and cluster metadata.",
+      "difficulty": 3
+    },
+    {
+      "id": 7,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "A data organization leader is upset because data analysis and engineering teams are producing differing reports due to siloed architectures. Which of the following describes a benefit if the organization migrates to a unified Databricks Lakehouse Platform?",
+      "options": {
+        "A": "Both teams would autoscale work as data size evolves",
+        "B": "Both teams would use the same source of truth for their work",
+        "C": "Both teams would reorganize to report to the same department",
+        "D": "Both teams would collaborate on projects in real-time",
+        "E": "Both teams would respond more quickly to ad-hoc requests"
+      },
+      "correct": "B",
+      "explanation": "A lakehouse eliminates silos by providing a single source of truth so both analytical and engineering teams work from the same data layer.",
+      "difficulty": 3
+    },
+    {
+      "id": 8,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following describes why a data lakehouse can be used for both machine learning workloads and batch ETL/ELT workloads?",
+      "options": {
+        "A": "Data lakehouse requires very little data modeling",
+        "B": "Data lakehouse combines compute and storage for simple governance",
+        "C": "Data lakehouse provides autoscaling for compute clusters",
+        "D": "Data lakehouse can store unstructured data and support ACID transactions",
+        "E": "Data lakehouse fully exists in the cloud"
+      },
+      "correct": "D",
+      "explanation": "The ability to store unstructured data (images, text) needed for ML and enforce ACID transactions needed for reliable ETL makes the lakehouse suitable for both workload types.",
+      "difficulty": 3
+    },
+    {
+      "id": 9,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following is NOT a Databricks Lakehouse object?",
+      "options": {
+        "A": "Tables",
+        "B": "Views",
+        "C": "Database/Schemas",
+        "D": "Catalog",
+        "E": "Functions",
+        "F": "Stored Procedures"
+      },
+      "correct": "F",
+      "explanation": "Databricks lakehouse objects include catalogs, databases/schemas, tables, views, and functions. Stored procedures are a traditional RDBMS concept not natively supported as a first-class object in Databricks SQL.",
+      "difficulty": 3
+    },
+    {
+      "id": 10,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following describes a correct statement about Delta Lake implementing a lakehouse?",
+      "options": {
+        "A": "Delta Lake uses proprietary format",
+        "B": "Using Apache Hadoop on cloud object storage",
+        "C": "Delta Lake always stores metadata in memory",
+        "D": "Delta Lake uses open source, open format, optimized cloud storage, scalable metadata",
+        "E": "Delta Lake stores data and metadata in compute memory"
+      },
+      "correct": "D",
+      "explanation": "Delta Lake is open source, uses open Parquet format for data, stores metadata in an open transaction log, and is optimized for cloud object storage with scalable metadata handling.",
+      "difficulty": 3
+    },
+    {
+      "id": 11,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following statements about the Databricks Lakehouse Platform is incorrect?",
+      "options": {
+        "A": "Supports end-to-end streaming and batch workloads",
+        "B": "Supports ACID transactions",
+        "C": "Supports diverse data types including structured and unstructured",
+        "D": "Supports BI and machine learning",
+        "E": "Storage is coupled with compute"
+      },
+      "correct": "E",
+      "explanation": "A core lakehouse principle is the decoupling of storage from compute, which enables independent scaling and cost efficiency.",
+      "difficulty": 3
+    },
+    {
+      "id": 12,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following correctly describes the Bronze layer in the Medallion Architecture?",
+      "options": {
+        "A": "Contains aggregated, business-ready data optimized for analytics",
+        "B": "Contains validated and cleaned data with applied business rules",
+        "C": "Contains raw, unvalidated data preserving the original format from source systems",
+        "D": "Contains metadata and schema definitions for all data assets",
+        "E": "Contains only streaming data ingested in real-time"
+      },
+      "correct": "C",
+      "explanation": "The Bronze layer is the landing zone for raw ingested data in its original format. It serves as the single source of truth for reprocessing and auditing.",
+      "difficulty": 3
+    },
+    {
+      "id": 13,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "A data workload needs to use a Bronze table as its destination. Which of the following describes this workload?",
+      "options": {
+        "A": "Job aggregating cleaned data for summary statistics",
+        "B": "Job querying aggregated data for a dashboard",
+        "C": "Job ingesting raw data from a streaming source into the Lakehouse",
+        "D": "Job developing a feature set for machine learning",
+        "E": "Job enriching data by parsing timestamps"
+      },
+      "correct": "C",
+      "explanation": "Bronze tables receive raw ingested data — this is the raw ingestion job landing data from a source system.",
+      "difficulty": 3
+    },
+    {
+      "id": 14,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "A data workload uses a Silver table as its source. Which of the following best describes this workload?",
+      "options": {
+        "A": "Job enriching data by parsing timestamps",
+        "B": "Job querying aggregated data feeding a dashboard",
+        "C": "Job ingesting raw data from a streaming source",
+        "D": "Job aggregating cleaned data to create summary statistics",
+        "E": "Job cleaning data by removing malformatted records"
+      },
+      "correct": "D",
+      "explanation": "Silver tables contain validated, cleaned data. A job reading from Silver and creating aggregations is producing Gold-layer data, making Silver the source for aggregation workloads.",
+      "difficulty": 3
+    },
+    {
+      "id": 15,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "A data workload uses a Gold table as its source. Which of the following best describes this workload?",
+      "options": {
+        "A": "Job enriching data by parsing timestamps",
+        "B": "Job querying aggregated data that already feeds into a dashboard",
+        "C": "Job ingesting raw data from a streaming source",
+        "D": "Job aggregating cleaned data for summary statistics",
+        "E": "Job cleaning data by removing malformatted records"
+      },
+      "correct": "B",
+      "explanation": "Gold tables contain business-ready, aggregated data. Dashboard queries are the primary consumers of Gold-layer data.",
+      "difficulty": 3
+    },
+    {
+      "id": 16,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following is true about Databricks Notebooks?",
+      "options": {
+        "A": "Notebooks only support Python",
+        "B": "Notebooks do not support real-time collaboration",
+        "C": "Databricks Notebooks support real-time coauthoring on a single notebook",
+        "D": "Notebooks require a separate Git client to be versioned",
+        "E": "Notebooks can only be scheduled through the Jobs API"
+      },
+      "correct": "C",
+      "explanation": "Databricks Notebooks support real-time coauthoring, allowing multiple users to edit the same notebook simultaneously with live cursor tracking.",
+      "difficulty": 3
+    },
+    {
+      "id": 17,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "What is the best approach when multiple engineers need to use both SQL and Python within the same notebook?",
+      "options": {
+        "A": "Create two separate notebooks, one for SQL and one for Python",
+        "B": "A single notebook can support multiple languages using magic commands (e.g., %sql, %python)",
+        "C": "Use an all-purpose cluster for Python and a SQL endpoint for SQL",
+        "D": "Use a job cluster for Python and a SQL endpoint for SQL"
+      },
+      "correct": "B",
+      "explanation": "Magic commands like %sql, %python, %scala, and %r allow switching languages within a single Databricks notebook cell.",
+      "difficulty": 3
+    },
+    {
+      "id": 18,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following describes an advantage of using Databricks Repos over traditional notebook versioning?",
+      "options": {
+        "A": "Merge when code is committed",
+        "B": "Pull request and review process",
+        "C": "Trigger Databricks Repos API to pull the latest version of code into production",
+        "D": "Resolve merge conflicts",
+        "E": "Delete a branch"
+      },
+      "correct": "C",
+      "explanation": "A key CI/CD advantage of Databricks Repos is the ability to trigger the Repos API to programmatically pull the latest production code, enabling automated deployment pipelines.",
+      "difficulty": 3
+    },
+    {
+      "id": 19,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "When should a data team utilize cluster pools?",
+      "options": {
+        "A": "An automated report needs to be refreshed as quickly as possible",
+        "B": "An automated report needs to be made reproducible",
+        "C": "An automated report needs to be tested to identify errors",
+        "D": "An automated report needs to be version-controlled across collaborators",
+        "E": "An automated report needs to be runnable by all stakeholders"
+      },
+      "correct": "A",
+      "explanation": "Cluster pools maintain pre-allocated, idle instances so clusters can start almost immediately without waiting for VM provisioning, reducing startup time significantly.",
+      "difficulty": 3
+    },
+    {
+      "id": 20,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following describes the best cluster type to use for a regularly scheduled nightly reporting job that needs to populate a table?",
+      "options": {
+        "A": "All-purpose cluster for a single job",
+        "B": "Job cluster",
+        "C": "Use an Azure VM to read and write Delta tables",
+        "D": "Use a Delta Live Table pipeline in continuous mode"
+      },
+      "correct": "B",
+      "explanation": "Job clusters are created when the job runs and terminated when it completes. They are more cost-effective than all-purpose clusters for automated workloads since they don't sit idle.",
+      "difficulty": 3
+    },
+    {
+      "id": 21,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following benefits is provided by array functions in Spark SQL?",
+      "options": {
+        "A": "Ability to work with multiple data types simultaneously",
+        "B": "Ability to work with data within partitions and windows",
+        "C": "Ability to work with time-related data in intervals",
+        "D": "An ability to work with complex, nested data ingested from JSON files"
+      },
+      "correct": "D",
+      "explanation": "Array functions (explode, flatten, collect_list, etc.) are designed to work with complex, nested data structures such as arrays and structs commonly found in JSON and semi-structured sources.",
+      "difficulty": 3
+    },
+    {
+      "id": 22,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following describes a benefit of the Photon engine in Databricks?",
+      "options": {
+        "A": "Photon enables real-time notebook collaboration",
+        "B": "Photon provides a vectorized query engine that accelerates SQL and DataFrame operations",
+        "C": "Photon is used exclusively for machine learning model training",
+        "D": "Photon replaces the Delta transaction log with an in-memory structure"
+      },
+      "correct": "B",
+      "explanation": "Photon is Databricks' native vectorized query engine written in C++ that significantly accelerates SQL and DataFrame operations, especially for scan-heavy workloads.",
+      "difficulty": 3
+    },
+    {
+      "id": 23,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following is true about the Databricks workspace (data plane) in the classic architecture?",
+      "options": {
+        "A": "The data plane contains the Databricks web application",
+        "B": "The data plane hosts the cluster management service",
+        "C": "The data plane is located in the customer's cloud account and runs the actual compute (driver and worker nodes) and stores data",
+        "D": "The data plane is managed entirely by Databricks"
+      },
+      "correct": "C",
+      "explanation": "In the classic Databricks architecture, the data plane (customer cloud account) contains the actual VMs (driver and worker nodes), DBFS, and cloud storage. The control plane (Databricks account) manages orchestration.",
+      "difficulty": 3
+    },
+    {
+      "id": 24,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "In a multi-hop (medallion) architecture, which of the following is a key advantage of the Gold layer over the Silver layer?",
+      "options": {
+        "A": "Gold tables store raw data for reprocessing",
+        "B": "Gold tables are optimized for specific business use cases with aggregations and denormalization, providing faster BI query performance",
+        "C": "Gold tables use a different file format than Silver tables",
+        "D": "Gold tables can only be read by data engineers, not data analysts"
+      },
+      "correct": "B",
+      "explanation": "Gold tables are pre-aggregated, denormalized, and optimized for specific analytical use cases. They provide faster query performance for BI tools and dashboards compared to Silver tables which still retain normalized structures.",
+      "difficulty": 3
+    },
+    {
+      "id": 25,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following is a key difference between Bronze and raw data tables?",
+      "options": {
+        "A": "Bronze tables must be in Parquet format; raw tables can be in any format",
+        "B": "Bronze tables are Delta format with full ACID support and history, while raw tables may be original source files without governance",
+        "C": "Raw tables support time travel; Bronze tables do not",
+        "D": "Bronze tables cannot store unstructured data"
+      },
+      "correct": "B",
+      "explanation": "In the lakehouse/medallion architecture, Bronze tables are managed Delta tables that add ACID compliance, schema enforcement, and transaction history on top of raw ingested data, which may be unmanaged flat files in arbitrary formats.",
+      "difficulty": 3
+    },
+    {
+      "id": 26,
+      "domainId": "lakehouse-platform",
+      "domainName": "Lakehouse Platform",
+      "text": "Which of the following correctly describes what the Databricks Lakehouse Platform provides that a traditional data warehouse does not?",
+      "options": {
+        "A": "SQL query support",
+        "B": "Data visualization and dashboarding",
+        "C": "Support for storing and processing unstructured data such as images and text alongside structured data",
+        "D": "Role-based access control"
+      },
+      "correct": "C",
+      "explanation": "Traditional data warehouses are designed for structured data only. The lakehouse extends this to support all data types (structured, semi-structured, unstructured) in a unified platform. ## Domain 2: ELT with Spark SQL and Python",
+      "difficulty": 3
+    },
+    {
+      "id": 27,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "A data engineer is attempting to drop a Spark SQL table called my_table using DROP TABLE IF EXISTS my_table. After running this command, the engineer notices that the data files and metadata files have been deleted from the file system. Which of the following describes why all of these files were deleted?",
+      "options": {
+        "A": "The table was managed",
+        "B": "The table's data was smaller than 10 GB",
+        "C": "The table's data was larger than 10 GB",
+        "D": "The table was external",
+        "E": "The table did not have a location"
+      },
+      "correct": "A",
+      "explanation": "When a managed table is dropped, Databricks deletes both the metadata and the underlying data files. Dropping an external table only removes the metadata; the data files remain.",
+      "difficulty": 3
+    },
+    {
+      "id": 28,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "A data engineer has been given a new record: id STRING = 'a1', rank INTEGER = 6, rating FLOAT = 9.4. Which of the following SQL commands can be used to append the new record to an existing Delta table my_table?",
+      "options": {
+        "A": "INSERT INTO my_table VALUES ('a1', 6, 9.4)",
+        "B": "my_table UNION VALUES ('a1', 6, 9.4)",
+        "C": "INSERT VALUES ('a1', 6, 9.4) INTO my_table",
+        "D": "UPDATE my_table VALUES ('a1', 6, 9.4)",
+        "E": "UPDATE VALUES ('a1', 6, 9.4) my_table"
+      },
+      "correct": "A",
+      "explanation": "INSERT INTO is the standard SQL command for appending rows to an existing table. The syntax INSERT INTO table VALUES (...) is correct.",
+      "difficulty": 3
+    },
+    {
+      "id": 29,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "A data engineer has created a new database using CREATE DATABASE IF NOT EXISTS customer360. In which of the following locations will the customer360 database be located?",
+      "options": {
+        "A": "dbfs:/user/hive/database/customer360",
+        "B": "dbfs:/user/hive/warehouse",
+        "C": "dbfs:/user/hive/customer360",
+        "D": "More information is needed to determine the correct response",
+        "E": "dbfs:/user/hive/database"
+      },
+      "correct": "D",
+      "explanation": "Without specifying a LOCATION, managed databases are stored in the default warehouse directory. However, this location depends on the workspace configuration (DBFS root, Unity Catalog managed storage, external Hive metastore), so more context is needed.",
+      "difficulty": 3
+    },
+    {
+      "id": 30,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What is the default file format used when writing a Delta table in Databricks?",
+      "options": {
+        "A": "Parquet",
+        "B": "JSON",
+        "C": "Delta",
+        "D": "CSV"
+      },
+      "correct": "C",
+      "explanation": "When writing a DataFrame with .write.format(\"delta\"), or creating a table in Databricks with no format specified in newer workspaces, Delta is the default format.",
+      "difficulty": 3
+    },
+    {
+      "id": 31,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which of the following creates a Delta table from a DataFrame in PySpark?",
+      "options": {
+        "A": "df.write.format(\"parquet\").saveAsTable(\"my_table\")",
+        "B": "df.write.saveAsTable(\"my_table\")",
+        "C": "df.write.format(\"delta\").saveAsTable(\"my_table\")",
+        "D": "df.saveAsTable(\"my_table\")"
+      },
+      "correct": "C",
+      "explanation": "Explicitly specifying format(\"delta\") ensures the table is written in Delta format with a transaction log.",
+      "difficulty": 3
+    },
+    {
+      "id": 32,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which SQL command creates a managed Delta table?",
+      "options": {
+        "A": "CREATE DELTA TABLE my_table",
+        "B": "CREATE TABLE my_table USING DELTA",
+        "C": "CREATE MANAGED TABLE my_table",
+        "D": "CREATE DELTA MANAGED TABLE my_table"
+      },
+      "correct": "B",
+      "explanation": "The standard DDL for creating a managed Delta table is CREATE TABLE table_name USING DELTA (optionally with column definitions and partitioning).",
+      "difficulty": 3
+    },
+    {
+      "id": 33,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which of the following is the main difference between a managed table and an external table in Databricks?",
+      "options": {
+        "A": "Managed tables support more file formats",
+        "B": "External tables cannot be queried via SQL",
+        "C": "Managed tables store data in the metastore-managed location; dropping them removes data",
+        "D": "External tables lack Delta Lake support"
+      },
+      "correct": "C",
+      "explanation": "Managed tables have their lifecycle tied to the metastore: dropping the table removes both metadata and data files. External tables only have metadata managed; data files are preserved on drop.",
+      "difficulty": 3
+    },
+    {
+      "id": 34,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "A data engineer creates a table using the LOCATION keyword. What type of table is created?",
+      "options": {
+        "A": "Managed Delta table",
+        "B": "External table",
+        "C": "Managed table",
+        "D": "Temporary table"
+      },
+      "correct": "B",
+      "explanation": "Using LOCATION in CREATE TABLE specifies an external path, making it an external (unmanaged) table. The data files at that path are not controlled by Databricks metadata lifecycle.",
+      "difficulty": 3
+    },
+    {
+      "id": 35,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which SQL statement eliminates duplicate rows from query results?",
+      "options": {
+        "A": "SELECT DISTINCT * FROM table_name",
+        "B": "SELECT DISTINCT * FROM table_name HAVING COUNT(*) > 1",
+        "C": "SELECT DISTINCT_ROWS (*) FROM table_name",
+        "D": "SELECT * FROM table_name GROUP BY * HAVING COUNT(*) < 1"
+      },
+      "correct": "A",
+      "explanation": "SELECT DISTINCT eliminates duplicate rows from the result set.",
+      "difficulty": 3
+    },
+    {
+      "id": 36,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Two tables exist: march_transactions and april_transactions with no duplicate rows between them. Which SQL command creates an all_transactions table combining both without duplicates?",
+      "options": {
+        "A": "INNER JOIN",
+        "B": "UNION",
+        "C": "OUTER JOIN",
+        "D": "INTERSECT"
+      },
+      "correct": "B",
+      "explanation": "UNION (without ALL) deduplicates rows from both tables. Since there are no duplicates between the tables, the result contains all rows from both. UNION ALL would also work since there are no duplicates, but UNION is the safer choice to guarantee no duplicates.",
+      "difficulty": 3
+    },
+    {
+      "id": 37,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What does the .option(\"mergeSchema\", \"true\") write option do?",
+      "options": {
+        "A": "Forces schema overwrite on every write",
+        "B": "Merges new schema fields into the existing table schema",
+        "C": "Prevents any schema changes",
+        "D": "Drops columns not present in the new DataFrame"
+      },
+      "correct": "B",
+      "explanation": "mergeSchema allows schema evolution by adding new columns from the DataFrame to the existing Delta table schema without failing or overwriting existing columns.",
+      "difficulty": 3
+    },
+    {
+      "id": 38,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What does setting overwriteSchema to true do when writing to a Delta table?",
+      "options": {
+        "A": "The table is dropped and recreated",
+        "B": "The schema is updated to match the DataFrame schema",
+        "C": "The table data is deleted",
+        "D": "Data is appended with new columns added"
+      },
+      "correct": "B",
+      "explanation": "overwriteSchema=true allows replacing the existing table schema entirely when writing in overwrite mode, useful when the structure has fundamentally changed.",
+      "difficulty": 3
+    },
+    {
+      "id": 39,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which of the following correctly creates a generated column in a Delta table DDL?",
+      "options": {
+        "A": "orderdate date GENERATED ALWAYS AS (CAST(orderTime as DATE))",
+        "B": "orderdate date COMPUTED ALWAYS AS (CAST(orderTime as DATE))",
+        "C": "orderdate date GENERATED COLUMN (CAST(orderTime as DATE))",
+        "D": "orderdate date CAST orderTime to DATE"
+      },
+      "correct": "A",
+      "explanation": "The correct syntax for a generated column in Delta Lake is: column_name type GENERATED ALWAYS AS (expression).",
+      "difficulty": 3
+    },
+    {
+      "id": 40,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What does the OPTIMIZE command do in Delta Lake?",
+      "options": {
+        "A": "Rewrites metadata files only",
+        "B": "Compresses table data files using GZIP",
+        "C": "Compacts small files into larger ones to improve read performance",
+        "D": "Deletes null records from the table"
+      },
+      "correct": "C",
+      "explanation": "OPTIMIZE compacts small Parquet files produced by frequent small writes (streaming, incremental loads) into fewer larger files, significantly improving query scan performance.",
+      "difficulty": 3
+    },
+    {
+      "id": 41,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What is the purpose of Z-Ordering (ZORDER BY) in Delta Lake?",
+      "options": {
+        "A": "Encrypts the table files",
+        "B": "Sorts files alphabetically for compression",
+        "C": "Co-locates related data in the same files to optimize selective query reads via data skipping",
+        "D": "Tracks schema version history"
+      },
+      "correct": "C",
+      "explanation": "Z-Ordering arranges data so that rows with similar values in the Z-ORDER columns are in the same files. Combined with Delta's min/max statistics, this enables file-level data skipping, greatly reducing I/O for selective queries.",
+      "difficulty": 3
+    },
+    {
+      "id": 42,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What is the purpose of the .repartition(n) transformation in Spark?",
+      "options": {
+        "A": "Increases available memory for a job",
+        "B": "Sorts data by a key column",
+        "C": "Reduces the number of tasks",
+        "D": "Changes the number of partitions in a DataFrame"
+      },
+      "correct": "D",
+      "explanation": ".repartition(n) performs a full shuffle to redistribute data into exactly n partitions, useful for increasing parallelism or preparing data for downstream operations.",
+      "difficulty": 3
+    },
+    {
+      "id": 43,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What does the spark.sql.shuffle.partitions configuration control?",
+      "options": {
+        "A": "Sets the amount of shuffle memory",
+        "B": "Controls the number of partitions used for shuffle operations (e.g., joins, aggregations)",
+        "C": "Tracks shuffle operation progress",
+        "D": "Limits the size of each shuffle file"
+      },
+      "correct": "B",
+      "explanation": "spark.sql.shuffle.partitions (default 200) determines the parallelism for wide transformations like joins and aggregations.",
+      "difficulty": 3
+    },
+    {
+      "id": 44,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What is one use of EXPLAIN in Spark SQL?",
+      "options": {
+        "A": "Encrypts query results",
+        "B": "Cancels a running query",
+        "C": "Displays the logical and physical query execution plan",
+        "D": "Modifies the table schema"
+      },
+      "correct": "C",
+      "explanation": "EXPLAIN (or EXPLAIN EXTENDED) shows the query's logical and physical plan, useful for understanding how Spark will execute a query and identifying optimization opportunities.",
+      "difficulty": 3
+    },
+    {
+      "id": 45,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which of the following is the correct syntax for creating a SQL UDF that converts temperature?",
+      "options": {
+        "A": "CREATE UDF FUNCTION udf_convert(temp DOUBLE, measure STRING) RETURNS DOUBLE ...",
+        "B": "CREATE USER FUNCTION udf_convert(temp DOUBLE, measure STRING) ...",
+        "C": "CREATE FUNCTION udf_convert(temp DOUBLE, measure STRING) RETURNS DOUBLE RETURN CASE WHEN measure = 'C' THEN (temp - 32) / 1.8 ELSE (temp * 1.8) + 32 END",
+        "D": "CREATE TEMP FUNCTION udf_convert ..."
+      },
+      "correct": "C",
+      "explanation": "SQL UDFs in Databricks use CREATE FUNCTION with the RETURNS clause specifying the return type and RETURN followed by the expression.",
+      "difficulty": 3
+    },
+    {
+      "id": 46,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "When calculating total sales from an ARRAY<STRUCT<employeeId: BIGINT, sales: INT>> column, which approach correctly aggregates the nested sales values?",
+      "options": {
+        "A": "WITH CTE using EXPLODE and SUM",
+        "B": "select aggregate(flatten(collect_list(performance.sales)), 0, (x, y) -> x + y)",
+        "C": "SELECT SUM(SLICE(performance, sales))",
+        "D": "select reduce(performance.sales, 0, (x, y) -> x + y)"
+      },
+      "correct": "B",
+      "explanation": "collect_list collects the arrays, flatten combines them into a single array, and aggregate (reduce) sums the values. This correctly handles nested array-of-struct aggregation.",
+      "difficulty": 3
+    },
+    {
+      "id": 47,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "In PySpark, what is the correct syntax for asserting that a row count equals 10?",
+      "options": {
+        "A": "assert (row_count = 10, 'Row count did not match')",
+        "B": "assert if (row_count = 10, 'Row count did not match')",
+        "C": "assert row_count == 10, 'Row count did not match'",
+        "D": "assert if row_count == 10, 'Row count did not match'"
+      },
+      "correct": "C",
+      "explanation": "Python's assert statement uses == for equality comparison, with an optional error message after a comma: assert condition, message.",
+      "difficulty": 3
+    },
+    {
+      "id": 48,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What is the correct Python construct for graceful error handling when executing a Spark write operation?",
+      "options": {
+        "A": "try: ... failure: ...",
+        "B": "try: ... catch: ...",
+        "C": "try: ... except: ...",
+        "D": "try: ... fail: ..."
+      },
+      "correct": "C",
+      "explanation": "Python uses try/except (not try/catch which is Java/Scala syntax) for exception handling.",
+      "difficulty": 3
+    },
+    {
+      "id": 49,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What is the best approach for passing a batch date as a changing input parameter to a Databricks notebook?",
+      "options": {
+        "A": "Create a notebook parameter, assign to a Python variable, and use it with a Spark DataFrame filter",
+        "B": "Create a dynamic view that calculates the batch date",
+        "C": "There is no way to combine Python variables with Spark code",
+        "D": "Manually edit the hardcoded date value each time the job runs"
+      },
+      "correct": "A",
+      "explanation": "Databricks widgets (dbutils.widgets) allow parameterizing notebooks. The widget value can be retrieved as a Python variable and used in Spark operations or SQL queries via spark.conf or string formatting.",
+      "difficulty": 3
+    },
+    {
+      "id": 50,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which of the following is a correct statement about session-scoped temporary views in Databricks?",
+      "options": {
+        "A": "Temporary views are lost once the notebook is detached and re-attached to a cluster",
+        "B": "Temporary views are stored on disk in memory",
+        "C": "Temporary views are accessible after a cluster restart",
+        "D": "Temporary views are created in the local_temp database"
+      },
+      "correct": "A",
+      "explanation": "Session-scoped temp views (CREATE TEMP VIEW) exist only for the duration of the SparkSession. Detaching and re-attaching a notebook creates a new session, so temp views are lost.",
+      "difficulty": 3
+    },
+    {
+      "id": 51,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which of the following is a correct statement about global temporary views?",
+      "options": {
+        "A": "Cannot be accessed after notebook detach/re-attach",
+        "B": "Are accessible across multiple clusters simultaneously",
+        "C": "Are accessible even if the notebook is detached and re-attached (same cluster session)",
+        "D": "Are accessible after a cluster restart"
+      },
+      "correct": "C",
+      "explanation": "Global temp views (CREATE GLOBAL TEMP VIEW) are stored in the global_temp database and persist for the life of the SparkContext (cluster session). They survive notebook detach/re-attach but are lost when the cluster restarts.",
+      "difficulty": 3
+    },
+    {
+      "id": 52,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What does INSERT OVERWRITE do to historical versions of a Delta table?",
+      "options": {
+        "A": "Overwrites data and clears all historical versions",
+        "B": "Overwrites the current version but preserves historical versions, enabling time travel",
+        "C": "Clears all historical data permanently",
+        "D": "Appends data to the current version"
+      },
+      "correct": "B",
+      "explanation": "INSERT OVERWRITE replaces the current table data but records the operation in the Delta transaction log, so historical versions remain queryable via time travel. It differs from DROP + recreate which would lose history.",
+      "difficulty": 3
+    },
+    {
+      "id": 53,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What format does Spark use by default when no format is specified for a write operation?",
+      "options": {
+        "A": "Delta",
+        "B": "CSV",
+        "C": "Parquet",
+        "D": "Avro"
+      },
+      "correct": "C",
+      "explanation": "Spark's default write format is Parquet, not Delta. Delta is default in newer Databricks workspace configurations, but the underlying Spark default remains Parquet.",
+      "difficulty": 3
+    },
+    {
+      "id": 54,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which file format supports schema evolution in Databricks Delta Lake?",
+      "options": {
+        "A": "CSV",
+        "B": "JSON",
+        "C": "Parquet",
+        "D": "Delta"
+      },
+      "correct": "D",
+      "explanation": "Delta Lake has built-in schema evolution support via mergeSchema and overwriteSchema options. Raw Parquet, CSV, and JSON do not have managed schema evolution.",
+      "difficulty": 3
+    },
+    {
+      "id": 55,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which of the following correctly describes what happens when DROP TABLE is run on an external Delta table?",
+      "options": {
+        "A": "Both the metadata and the data files are deleted",
+        "B": "Only the metadata is removed from the metastore; data files remain in the external location",
+        "C": "The table is renamed with a _deleted suffix",
+        "D": "The data files are archived to a backup location",
+        "E": "The operation fails because external tables cannot be dropped"
+      },
+      "correct": "B",
+      "explanation": "Dropping an external table only removes the table definition from the metastore. The underlying data files at the LOCATION path are preserved, unlike managed tables where both metadata and files are deleted.",
+      "difficulty": 3
+    },
+    {
+      "id": 56,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "What does the DESCRIBE EXTENDED command provide for a Delta table?",
+      "options": {
+        "A": "Only the column names and data types",
+        "B": "Detailed information including column names, data types, table type (managed vs external), location, provider, and table properties",
+        "C": "Only the partition information",
+        "D": "The last 10 transactions from the Delta log"
+      },
+      "correct": "B",
+      "explanation": "DESCRIBE EXTENDED (or DESCRIBE TABLE EXTENDED) provides comprehensive table metadata including schema, location path, table type, partition columns, table properties, and storage format.",
+      "difficulty": 3
+    },
+    {
+      "id": 57,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which of the following is a true statement about Delta Lake ACID compliance?",
+      "options": {
+        "A": "Delta Lake ACID ensures standardized schema across all tables",
+        "B": "Delta Lake provides better data compression than Parquet",
+        "C": "Delta Lake's ACID compliance ensures reliable concurrent operations with consistent reads and writes",
+        "D": "Delta Lake ACID compliance reduces cloud storage costs"
+      },
+      "correct": "C",
+      "explanation": "Delta Lake's ACID transactions (Atomicity, Consistency, Isolation, Durability) ensure that concurrent reads and writes behave correctly without data corruption or inconsistency.",
+      "difficulty": 3
+    },
+    {
+      "id": 58,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "A data engineer drops a managed table using DROP TABLE. Which of the following is also true?",
+      "options": {
+        "A": "Only the table definition in the metastore is removed; data files remain",
+        "B": "The underlying data files AND the metastore entry are both deleted",
+        "C": "The table is marked as deleted but recoverable for 30 days",
+        "D": "The data files are moved to the recycle bin"
+      },
+      "correct": "B",
+      "explanation": "Dropping a managed table removes both the table metadata from the metastore AND the underlying data files from storage. This is the key difference from external tables.",
+      "difficulty": 3
+    },
+    {
+      "id": 59,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "Which of the following is a true statement about Z-Ordering and its impact on query performance?",
+      "options": {
+        "A": "Z-Ordering physically sorts the entire table by the specified columns",
+        "B": "Z-Ordering co-locates related data in files and enables file-level data skipping when filtering on Z-Ordered columns",
+        "C": "Z-Ordering is equivalent to partitioning and can replace it",
+        "D": "Z-Ordering only works on string columns"
+      },
+      "correct": "B",
+      "explanation": "Z-Ordering clusters related data into the same files. Combined with Delta's per-file min/max statistics, the query engine can skip entire files when filtering, dramatically reducing I/O.",
+      "difficulty": 3
+    },
+    {
+      "id": 60,
+      "domainId": "elt-with-spark-sql-and-python",
+      "domainName": "ELT with Spark SQL and Python",
+      "text": "A data engineer wants to create a table that should only be accessible while their Spark session is active, without persisting to any metastore. Which type of table/view should they create?",
+      "options": {
+        "A": "External table",
+        "B": "Managed Delta table",
+        "C": "Session-scoped temporary view (CREATE TEMP VIEW)",
+        "D": "Global temporary view"
+      },
+      "correct": "C",
+      "explanation": "Session-scoped temp views (CREATE TEMP VIEW or CREATE TEMPORARY VIEW) exist only in the current SparkSession and are not persisted to any metastore, making them invisible to other sessions and clusters. ## Domain 3: Incremental Data Processing",
+      "difficulty": 3
+    },
+    {
+      "id": 61,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which of the following describes the type of workloads that are always compatible with Auto Loader?",
+      "options": {
+        "A": "Streaming workloads",
+        "B": "Machine learning workloads",
+        "C": "Serverless workloads",
+        "D": "Batch workloads",
+        "E": "Dashboard workloads"
+      },
+      "correct": "A",
+      "explanation": "Auto Loader uses Structured Streaming under the hood and is always streaming-compatible. It reads from cloud storage using the cloudFiles source and processes data incrementally.",
+      "difficulty": 3
+    },
+    {
+      "id": 62,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "A data engineer is designing a pipeline where the source generates files in a shared directory. Files accumulate and should not be deleted. The engineer needs to ingest only new files on each run. Which tool solves this problem?",
+      "options": {
+        "A": "Unity Catalog",
+        "B": "Delta Lake",
+        "C": "Databricks SQL",
+        "D": "Data Explorer",
+        "E": "Auto Loader"
+      },
+      "correct": "E",
+      "explanation": "Auto Loader tracks which files have been processed using checkpoints and metadata logs, enabling incremental ingestion of only new files without modifying or deleting the source files.",
+      "difficulty": 3
+    },
+    {
+      "id": 63,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What is the key difference between Auto Loader and COPY INTO for file ingestion?",
+      "options": {
+        "A": "Auto Loader supports file notification when performing incremental loads",
+        "B": "COPY INTO is more efficient for large volumes of millions of files",
+        "C": "Auto Loader only supports directory listing mode",
+        "D": "COPY INTO supports file notification",
+        "E": "Both support identical features"
+      },
+      "correct": "A",
+      "explanation": "Auto Loader supports both directory listing and file notification (via cloud event services like AWS SQS or Azure Event Grid) for detecting new files. COPY INTO only supports directory listing and is better suited for smaller file sets.",
+      "difficulty": 3
+    },
+    {
+      "id": 64,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Why does Auto Loader require a schema location to be configured?",
+      "options": {
+        "A": "The schema location stores the schema inferred by Auto Loader across job restarts",
+        "B": "To improve data compression ratios",
+        "C": "For fine-grained access control on the data",
+        "D": "To enable result caching"
+      },
+      "correct": "A",
+      "explanation": "Auto Loader infers schema from sampled files and stores it in the schema location (_schemas directory) to avoid re-inferring on every stream restart, ensuring schema stability.",
+      "difficulty": 3
+    },
+    {
+      "id": 65,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which API is used to perform a streaming read with Auto Loader?",
+      "options": {
+        "A": ".read()",
+        "B": ".read.format(\"delta\")",
+        "C": ".readStream.format(\"cloudFiles\")",
+        "D": ".readStream()"
+      },
+      "correct": "C",
+      "explanation": "Auto Loader uses the cloudFiles source format with the Structured Streaming readStream API: spark.readStream.format(\"cloudFiles\").option(\"cloudFiles.format\", \"json\")...",
+      "difficulty": 3
+    },
+    {
+      "id": 66,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What supported methods does Auto Loader use to identify the arrival of new files?",
+      "options": {
+        "A": "Directory listing and file notification",
+        "B": "Checkpointing and watermarking",
+        "C": "Write-ahead logging and read-head logging",
+        "D": "File hashing and dynamic file lookup"
+      },
+      "correct": "A",
+      "explanation": "Auto Loader uses two file detection modes: directory listing (polls the directory for new files) and file notification (uses cloud storage event notifications for scalable, near-real-time detection).",
+      "difficulty": 3
+    },
+    {
+      "id": 67,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "How does Auto Loader track which files have already been processed?",
+      "options": {
+        "A": "By tracking file names in a list",
+        "B": "By comparing file timestamps",
+        "C": "Through checkpoint and metadata logs stored in the checkpoint location",
+        "D": "By comparing file sizes"
+      },
+      "correct": "C",
+      "explanation": "Auto Loader writes a checkpoint and maintains metadata logs in the configured checkpointLocation, enabling exactly-once processing and resuming from where it left off after failures.",
+      "difficulty": 3
+    },
+    {
+      "id": 68,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What does .trigger(once=True) do in a Structured Streaming query?",
+      "options": {
+        "A": "Disables the streaming job permanently",
+        "B": "Processes all available data as one batch, then stops the stream",
+        "C": "Triggers the stream every second",
+        "D": "Runs the stream indefinitely"
+      },
+      "correct": "B",
+      "explanation": "trigger(once=True) processes all available data as a single micro-batch and then terminates the stream, useful for scheduled batch-style incremental updates.",
+      "difficulty": 3
+    },
+    {
+      "id": 69,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "A data engineer wants a Structured Streaming query to execute a micro-batch every 5 seconds. Which trigger configuration is correct?",
+      "options": {
+        "A": ".trigger(\"5 seconds\")",
+        "B": ".trigger()",
+        "C": ".trigger(once=\"5 seconds\")",
+        "D": ".trigger(processingTime=\"5 seconds\")",
+        "E": ".trigger(continuous=\"5 seconds\")"
+      },
+      "correct": "D",
+      "explanation": "trigger(processingTime=\"5 seconds\") sets a fixed interval between micro-batch processing. trigger(continuous=...) enables continuous processing mode (experimental).",
+      "difficulty": 3
+    },
+    {
+      "id": 70,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What tracks the versions of a Delta table's transaction history?",
+      "options": {
+        "A": "JSON log files in a separate S3 bucket",
+        "B": "Versioned CSV files in the table directory",
+        "C": "The transaction log directory (_delta_log) containing JSON commit files and checkpoint files",
+        "D": "The Hive Metastore database"
+      },
+      "correct": "C",
+      "explanation": "Delta Lake maintains a _delta_log directory within the table directory. Each transaction creates a numbered JSON file (000.json, 001.json, etc.) and periodic Parquet checkpoint files recording the table's state.",
+      "difficulty": 3
+    },
+    {
+      "id": 71,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which SQL command shows the full history of transactions for a Delta table?",
+      "options": {
+        "A": "SHOW VERSIONS FOR table_name",
+        "B": "DESCRIBE HISTORY table_name",
+        "C": "SHOW LOGS FOR table_name",
+        "D": "LIST DELTA VERSIONS table_name"
+      },
+      "correct": "B",
+      "explanation": "DESCRIBE HISTORY table_name returns a history of all operations performed on the table including timestamps, user, operation type, and version number.",
+      "difficulty": 3
+    },
+    {
+      "id": 72,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which Delta Lake feature allows a data engineer to simplify the backup process without manually copying files before an update operation?",
+      "options": {
+        "A": "Use the time travel feature to refer to old data instead of manually copying",
+        "B": "Use DEEP CLONE to create a backup before the update",
+        "C": "Use SHADOW COPY as a backup strategy",
+        "D": "Cloud storage automatically retains previous file versions"
+      },
+      "correct": "A",
+      "explanation": "Delta's time travel (version history) means previous versions of data remain queryable via VERSION AS OF or TIMESTAMP AS OF — no manual backup copying needed.",
+      "difficulty": 3
+    },
+    {
+      "id": 73,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What is the impact of running VACUUM transactions RETAIN 0 HOURS on a Delta table?",
+      "options": {
+        "A": "Command succeeds and removes no data",
+        "B": "Command fails if there is an active transaction running on the table",
+        "C": "Command fails because it cannot run with the retention duration check enabled (default safety threshold is 7 days)",
+        "D": "Command succeeds and removes all historical data immediately"
+      },
+      "correct": "C",
+      "explanation": "By default, Delta Lake prevents VACUUM with a retention period less than 7 days (168 hours) to protect time travel. To override, you must set spark.databricks.delta.retentionDurationCheck.enabled = false.",
+      "difficulty": 3
+    },
+    {
+      "id": 74,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What happens when you query a Delta table while another write operation is actively updating it?",
+      "options": {
+        "A": "The query fails with a lock conflict error",
+        "B": "The query waits until the write operation completes",
+        "C": "The query reads a consistent snapshot from the transaction log (snapshot isolation)",
+        "D": "The query returns partial results from the in-progress write"
+      },
+      "correct": "C",
+      "explanation": "Delta Lake's ACID transactions with snapshot isolation ensure readers always see a consistent state without blocking writes. Concurrent reads and writes are supported.",
+      "difficulty": 3
+    },
+    {
+      "id": 75,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which techniques provide end-to-end fault tolerance in Structured Streaming?",
+      "options": {
+        "A": "Checkpointing and watermarking",
+        "B": "Write-ahead logging and watermarking",
+        "C": "Checkpointing and idempotent sinks",
+        "D": "Write-ahead logging and idempotent sinks"
+      },
+      "correct": "C",
+      "explanation": "Structured Streaming achieves fault tolerance through: (1) checkpointing the stream progress and state, and (2) idempotent sinks (exactly-once writes, e.g., using Delta Lake). These two together guarantee end-to-end exactly-once semantics.",
+      "difficulty": 3
+    },
+    {
+      "id": 76,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What is the main purpose of the checkpoint location in a Structured Streaming query?",
+      "options": {
+        "A": "To improve write speed to the sink",
+        "B": "To track data quality metrics",
+        "C": "To maintain stream state and track progress for fault tolerance and restart recovery",
+        "D": "To create automatic data backups"
+      },
+      "correct": "C",
+      "explanation": "The checkpoint location stores the stream's current offset (progress) and any stateful aggregation state. This allows the stream to recover from failures and resume from where it left off.",
+      "difficulty": 3
+    },
+    {
+      "id": 77,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "How do you ensure idempotent writes in a Structured Streaming pipeline?",
+      "options": {
+        "A": "Disable checkpointing",
+        "B": "Use append output mode only",
+        "C": "Use complete output mode",
+        "D": "Enable checkpointing and use deduplication at the sink (e.g., Delta Lake with idempotent writes)"
+      },
+      "correct": "D",
+      "explanation": "Checkpointing tracks offsets to avoid reprocessing, and Delta Lake's transaction log enables idempotent (exactly-once) writes even on retry, together ensuring end-to-end idempotency.",
+      "difficulty": 3
+    },
+    {
+      "id": 78,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which command is used to create a streaming view on a Delta table in PySpark?",
+      "options": {
+        "A": "spark.read.format(\"delta\").table(\"my_table\").createOrReplaceTempView(\"my_view\")",
+        "B": "spark.readStream.format(\"delta\").table(\"my_table\").createOrReplaceTempView(\"my_view\")",
+        "C": "spark.read.format(\"delta\").table(\"my_table\").mode(\"stream\").createOrReplaceTempView(\"my_view\")",
+        "D": "spark.read.format(\"delta\").stream(\"my_table\").createOrReplaceTempView(\"my_view\")"
+      },
+      "correct": "B",
+      "explanation": "To create a streaming temp view from a Delta table, use readStream (not read) so Spark processes it as a streaming source.",
+      "difficulty": 3
+    },
+    {
+      "id": 79,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What does the .foreachBatch() method do in Structured Streaming?",
+      "options": {
+        "A": "Writes the entire stream once and stops",
+        "B": "Triggers the stream processing manually",
+        "C": "Applies custom processing logic to each micro-batch as a static DataFrame",
+        "D": "Skips writing to the output sink"
+      },
+      "correct": "C",
+      "explanation": ".foreachBatch() receives each micro-batch as a static DataFrame, enabling complex operations like MERGE, multi-table writes, or calling ML model inference that aren't directly supported in streaming mode.",
+      "difficulty": 3
+    },
+    {
+      "id": 80,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which of the following file formats is required by the COPY INTO command?",
+      "options": {
+        "A": "Delta only",
+        "B": "JSON only",
+        "C": "CSV only",
+        "D": "Any supported format (JSON, CSV, Parquet, Avro, etc.)"
+      },
+      "correct": "D",
+      "explanation": "COPY INTO supports multiple file formats including JSON, CSV, Parquet, Avro, ORC, and text. The format is specified with the FILEFORMAT clause.",
+      "difficulty": 3
+    },
+    {
+      "id": 81,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What are the two output modes compatible with watermarks in Structured Streaming?",
+      "options": {
+        "A": "Complete and append",
+        "B": "Append and update",
+        "C": "Complete and update",
+        "D": "All three modes work with watermarks"
+      },
+      "correct": "B",
+      "explanation": "Watermarks work with append mode (produces final results after watermark passes) and update mode (updates aggregates as new data arrives). Complete mode emits the entire result set each time, so watermarks are not compatible with it.",
+      "difficulty": 3
+    },
+    {
+      "id": 82,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which of the following is a benefit of using DEEP CLONE in Delta Lake?",
+      "options": {
+        "A": "Creates a zero-copy reference to the source table's files",
+        "B": "Creates an independent full copy of the source table's data and metadata, useful for backups and testing",
+        "C": "Clones the schema only without copying data files",
+        "D": "Creates a read-only snapshot view of the table"
+      },
+      "correct": "B",
+      "explanation": "DEEP CLONE copies both the data files and the transaction log to a new location, creating a fully independent copy. This is useful for creating production backups or test environments. SHALLOW CLONE is the zero-copy reference approach.",
+      "difficulty": 3
+    },
+    {
+      "id": 83,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "A data engineer runs VACUUM on a Delta table. Which of the following is a consequence of this operation?",
+      "options": {
+        "A": "All table data is permanently deleted",
+        "B": "Old data files outside the retention period are deleted, which can break time travel for versions before the retention boundary",
+        "C": "The transaction log is cleared",
+        "D": "Table statistics are recomputed",
+        "E": "Small files are compacted"
+      },
+      "correct": "B",
+      "explanation": "VACUUM removes data files no longer referenced by the current or recent transaction log entries (outside the retention period, default 7 days). This frees storage but means you can no longer time-travel to versions whose files were vacuumed.",
+      "difficulty": 3
+    },
+    {
+      "id": 84,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which of the following SQL commands restores a Delta table to a previous version?",
+      "options": {
+        "A": "RESTORE TABLE sales VERSION AS OF 24",
+        "B": "ROLLBACK TABLE sales TO VERSION 24",
+        "C": "REVERT TABLE sales VERSION 24",
+        "D": "RESET TABLE sales TO VERSION AS OF 24"
+      },
+      "correct": "A",
+      "explanation": "The RESTORE TABLE command in Delta Lake restores the table to a specified historical version (VERSION AS OF) or timestamp (TIMESTAMP AS OF).",
+      "difficulty": 3
+    },
+    {
+      "id": 85,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "A data engineer creates a SHALLOW CLONE of a Delta table. What happens when VACUUM is run on the shallow clone?",
+      "options": {
+        "A": "VACUUM removes files from both the clone and the source table",
+        "B": "VACUUM on the shallow clone results in an error because shallow clones reference the source table's files",
+        "C": "VACUUM removes only the clone's metadata files",
+        "D": "VACUUM on a shallow clone behaves identically to running VACUUM on a regular table"
+      },
+      "correct": "B",
+      "explanation": "SHALLOW CLONE does not copy data files — it references the source table's files. Running VACUUM on a shallow clone can result in errors or unexpected behavior because the referenced files are managed by the source table.",
+      "difficulty": 3
+    },
+    {
+      "id": 86,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What is the purpose of the processingTime configuration in a Structured Streaming query?",
+      "options": {
+        "A": "Sets the maximum time a stream can run before auto-terminating",
+        "B": "Controls the interval between micro-batch processing triggers",
+        "C": "Sets the timeout for each individual record processing",
+        "D": "Configures the stream's checkpoint write interval"
+      },
+      "correct": "B",
+      "explanation": "processingTime in the trigger configuration (e.g., trigger(processingTime=\"30 seconds\")) specifies the interval between consecutive micro-batch executions.",
+      "difficulty": 3
+    },
+    {
+      "id": 87,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which of the following describes a benefit of configuring continuous processing mode in Structured Streaming?",
+      "options": {
+        "A": "Processes data exactly once per day",
+        "B": "Provides lower latency by processing records as soon as they arrive with millisecond latency",
+        "C": "Eliminates the need for checkpointing",
+        "D": "Automatically scales compute based on data volume"
+      },
+      "correct": "B",
+      "explanation": "Continuous processing mode (experimental) processes records with ~1ms latency instead of the seconds typical for micro-batch. However, it has limited operator support compared to micro-batch mode.",
+      "difficulty": 3
+    },
+    {
+      "id": 88,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which of the following correctly describes when COPY INTO should be used instead of Auto Loader?",
+      "options": {
+        "A": "When processing millions of files continuously arriving in cloud storage",
+        "B": "When schema evolution is required",
+        "C": "When loading a relatively small, bounded set of files that don't require schema inference",
+        "D": "When near-real-time latency is required"
+      },
+      "correct": "C",
+      "explanation": "COPY INTO is best for idempotent, bounded batch loads from cloud storage. Auto Loader is preferred when dealing with continuous file arrivals, large volumes (millions of files), or when schema inference/evolution is needed.",
+      "difficulty": 3
+    },
+    {
+      "id": 89,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What happens to a Delta table's VACUUM when a shallow clone exists that references the source table's files?",
+      "options": {
+        "A": "VACUUM runs normally and removes unreferenced files",
+        "B": "VACUUM on the source could delete files still referenced by the shallow clone, potentially breaking the clone",
+        "C": "VACUUM is blocked until all shallow clones are deleted",
+        "D": "VACUUM automatically excludes files referenced by shallow clones"
+      },
+      "correct": "B",
+      "explanation": "Shallow clones reference the source table's data files without copying them. Running VACUUM on the source table may delete files that the shallow clone still depends on, because VACUUM doesn't know about external references.",
+      "difficulty": 3
+    },
+    {
+      "id": 90,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which of the following is the correct way to reference a previous Delta table version for time travel?",
+      "options": {
+        "A": "SELECT * FROM my_table WHERE version = 5",
+        "B": "SELECT * FROM my_table VERSION AS OF 5",
+        "C": "SELECT * FROM my_table AT VERSION 5",
+        "D": "SELECT * FROM my_table SNAPSHOT VERSION 5"
+      },
+      "correct": "B",
+      "explanation": "Delta Lake time travel syntax uses VERSION AS OF n (or TIMESTAMP AS OF '2024-01-01') in the SELECT statement or using the @v notation: my_table@v5.",
+      "difficulty": 3
+    },
+    {
+      "id": 91,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What is the minimum retention period for VACUUM to work without disabling the safety check in Databricks?",
+      "options": {
+        "A": "24 hours",
+        "B": "48 hours",
+        "C": "168 hours (7 days)",
+        "D": "30 days"
+      },
+      "correct": "C",
+      "explanation": "Delta Lake's default minimum retention period for VACUUM is 168 hours (7 days). Running VACUUM with a shorter retention requires explicitly disabling the delta.retentionDurationCheck safety check.",
+      "difficulty": 3
+    },
+    {
+      "id": 92,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which of the following describes how Structured Streaming handles late-arriving data?",
+      "options": {
+        "A": "Late data is always dropped and cannot be processed",
+        "B": "Watermarks define a threshold; data arriving after the watermark is typically dropped",
+        "C": "All late data is buffered indefinitely until processed",
+        "D": "Late data is automatically replayed from the source"
+      },
+      "correct": "B",
+      "explanation": "Watermarks define how late data can be and still be processed. Data arriving after the watermark threshold is dropped from aggregation windows. The watermark threshold must be set to balance latency vs. data completeness.",
+      "difficulty": 3
+    },
+    {
+      "id": 93,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "Which of the following describes the best approach to prevent the same data from being ingested twice when using COPY INTO?",
+      "options": {
+        "A": "COPY INTO is not idempotent; you must track processed files manually",
+        "B": "COPY INTO is idempotent by design — running the same COPY INTO command multiple times on the same data will not duplicate records",
+        "C": "Add a DISTINCT clause to the COPY INTO statement",
+        "D": "Use a watermark to prevent duplicate ingestion"
+      },
+      "correct": "B",
+      "explanation": "COPY INTO tracks which files have already been loaded (using internal state) and skips them on subsequent runs, making it idempotent. Running the same COPY INTO command multiple times is safe.",
+      "difficulty": 3
+    },
+    {
+      "id": 94,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What is the purpose of the `_rescued_data` column that Auto Loader can add to a DataFrame?",
+      "options": {
+        "A": "It stores the file name of each ingested record",
+        "B": "It captures data that doesn't match the schema (malformed records, extra columns) so no data is lost",
+        "C": "It stores the checksum of each ingested file",
+        "D": "It captures records that were deduplicated"
+      },
+      "correct": "B",
+      "explanation": "When schema enforcement is enabled, Auto Loader stores data that doesn't match the declared schema in a _rescued_data column as a JSON string, preventing data loss from schema mismatches.",
+      "difficulty": 3
+    },
+    {
+      "id": 95,
+      "domainId": "incremental-data-processing",
+      "domainName": "Incremental Data Processing",
+      "text": "What is the function of `spark.readStream.format(\"delta\").table(\"my_table\")` in PySpark?",
+      "options": {
+        "A": "Reads the entire Delta table as a static batch DataFrame",
+        "B": "Creates a streaming DataFrame that reads new records appended to the Delta table incrementally",
+        "C": "Creates a real-time connection to an external streaming source",
+        "D": "Reads the latest snapshot of the Delta table as a stream"
+      },
+      "correct": "B",
+      "explanation": "Using readStream with a Delta table source creates a streaming DataFrame that processes only newly appended records since the last checkpoint, enabling incremental downstream processing. ## Domain 4: Production Pipelines",
+      "difficulty": 3
+    },
+    {
+      "id": 96,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "Which of the following data quality monitoring tools in Databricks is designed for monitoring data quality and automatically quarantining bad data?",
+      "options": {
+        "A": "Auto Loader",
+        "B": "Delta Live Tables",
+        "C": "Jobs and Tasks",
+        "D": "Unity Catalog",
+        "E": "Structured Streaming with multi-hop"
+      },
+      "correct": "B",
+      "explanation": "Delta Live Tables (DLT) has built-in data quality expectations (CONSTRAINT / EXPECT clauses) that allow tagging, dropping, or failing on invalid records, with quality metrics tracked in the event log.",
+      "difficulty": 3
+    },
+    {
+      "id": 97,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "A dataset has been defined using Delta Live Tables with the following: CONSTRAINT valid_timestamp EXPECT (timestamp > '2020-01-01') ON VIOLATION DROP ROW. What is the expected behavior when a batch of data containing violations is processed?",
+      "options": {
+        "A": "Records are dropped and loaded into a quarantine table",
+        "B": "Records are added to the dataset with an invalid flag",
+        "C": "Records are dropped and recorded as invalid in the event log",
+        "D": "Records are added to the dataset and recorded in the event log",
+        "E": "The job fails immediately"
+      },
+      "correct": "C",
+      "explanation": "ON VIOLATION DROP ROW causes invalid records to be silently dropped from the target dataset. The violations are recorded (count of dropped rows, etc.) in the DLT event log for monitoring.",
+      "difficulty": 3
+    },
+    {
+      "id": 98,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "When should CREATE STREAMING LIVE TABLE be used over CREATE LIVE TABLE in Delta Live Tables?",
+      "options": {
+        "A": "When the subsequent step in the pipeline is static",
+        "B": "When data needs to be processed incrementally from a streaming or append-only source",
+        "C": "The syntax is redundant and unnecessary",
+        "D": "When performing complicated aggregations",
+        "E": "When the previous step in the pipeline is static"
+      },
+      "correct": "B",
+      "explanation": "CREATE STREAMING LIVE TABLE processes data incrementally (new rows only) from streaming sources. CREATE LIVE TABLE (materialized view) recomputes the entire result from scratch on each pipeline update.",
+      "difficulty": 3
+    },
+    {
+      "id": 99,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "In a Delta Live Tables query that references STREAM(LIVE.customers), why is the STREAM() function needed?",
+      "options": {
+        "A": "It is not needed and will cause an error",
+        "B": "Because the customers table was updated since the last run",
+        "C": "Because the customers table is itself a Streaming Live Table",
+        "D": "Because it references a Structured Streaming PySpark DataFrame"
+      },
+      "correct": "C",
+      "explanation": "When reading from another DLT table that is a STREAMING LIVE TABLE, you must use STREAM(LIVE.table_name) to tell DLT to process it as a stream (incrementally) rather than recomputing from scratch.",
+      "difficulty": 3
+    },
+    {
+      "id": 100,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "What must be specified when creating a new Delta Live Tables pipeline?",
+      "options": {
+        "A": "A key-value pair configuration for cluster settings",
+        "B": "At least one notebook library to execute",
+        "C": "A cloud storage location path for written data",
+        "D": "A target database location for data"
+      },
+      "correct": "B",
+      "explanation": "The minimum requirement for a DLT pipeline is at least one source notebook containing the pipeline definitions (CREATE LIVE TABLE / CREATE STREAMING LIVE TABLE statements).",
+      "difficulty": 3
+    },
+    {
+      "id": 101,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "How can a data engineer identify which table in a DLT pipeline is dropping records?",
+      "options": {
+        "A": "Set up separate expectations for each table",
+        "B": "It cannot be determined without external logging",
+        "C": "Set up email notifications for each table",
+        "D": "Navigate to the DLT pipeline UI, click each table, and view the data quality statistics panel",
+        "E": "Click the \"Error\" button on the pipeline page to review errors"
+      },
+      "correct": "D",
+      "explanation": "The DLT pipeline UI provides a graphical view of each table with data quality metrics (records passed, failed, dropped). Clicking on a table shows its constraint statistics.",
+      "difficulty": 3
+    },
+    {
+      "id": 102,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "What is the main difference between CREATE STREAMING LIVE TABLE and CREATE LIVE TABLE in DLT?",
+      "options": {
+        "A": "STREAMING LIVE TABLE is used in multi-hop architecture only",
+        "B": "LIVE TABLE is used for streaming data sources",
+        "C": "STREAMING LIVE TABLE processes streaming sources and incremental data; LIVE TABLE recomputes from all data",
+        "D": "They are functionally identical; STREAMING LIVE TABLE syntax is deprecated",
+        "E": "They use different underlying processing engines"
+      },
+      "correct": "C",
+      "explanation": "STREAMING LIVE TABLE (streaming table) processes only new/appended data incrementally. LIVE TABLE (materialized view) recomputes from the complete source dataset each pipeline run.",
+      "difficulty": 3
+    },
+    {
+      "id": 103,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "A data engineer's job fails randomly because of spot instance interruptions. Which feature in Databricks Jobs/Tasks can address this issue?",
+      "options": {
+        "A": "Add a retry policy to the task",
+        "B": "Switch all compute to on-demand instances",
+        "C": "Use multiple clusters in parallel",
+        "D": "Enable cluster autoscaling",
+        "E": "Increase the cluster size"
+      },
+      "correct": "A",
+      "explanation": "Configuring a retry policy on a task allows it to automatically retry on failure (e.g., from a spot instance interruption) without manual intervention, improving job resilience.",
+      "difficulty": 3
+    },
+    {
+      "id": 104,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "A Databricks Job has a single task. A new task is needed that runs a notebook BEFORE the original task. How should the engineer set this up?",
+      "options": {
+        "A": "Clone the existing task and update the notebook path",
+        "B": "Create a new task and add the original task as a dependency of the new task",
+        "C": "Create a new task with the original task as a dependent",
+        "D": "Create a new Job with both tasks running concurrently",
+        "E": "Clone the job to a new Job and edit the notebook"
+      },
+      "correct": "B",
+      "explanation": "In Databricks Jobs, task dependencies flow from prerequisite to dependent. To make Task A run before Task B, you configure Task B to \"depend on\" Task A. So create the new (prerequisite) task and make the original task depend on it.",
+      "difficulty": 3
+    },
+    {
+      "id": 105,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "When should a Task be selected in the \"Depends On\" field of a Databricks Job task configuration?",
+      "options": {
+        "A": "When another task needs to be replaced by this task",
+        "B": "When another task must complete successfully before this task begins",
+        "C": "When another task shares dependency libraries with this task",
+        "D": "When another task uses minimal compute resources"
+      },
+      "correct": "B",
+      "explanation": "\"Depends On\" creates an execution ordering dependency. The task will only start after all tasks listed in its \"Depends On\" field complete successfully.",
+      "difficulty": 3
+    },
+    {
+      "id": 106,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "A data team has a multi-task Databricks Job that runs nightly, but cluster startup is taking too long. How can cluster startup time be improved?",
+      "options": {
+        "A": "Use Databricks SQL endpoints instead of clusters",
+        "B": "Use job clusters instead of all-purpose clusters",
+        "C": "Configure single-node clusters for all tasks",
+        "D": "Use clusters from a pre-configured cluster pool",
+        "E": "Configure autoscaling for larger data volumes"
+      },
+      "correct": "D",
+      "explanation": "Cluster pools maintain a set of ready-to-use, idle VM instances. When a job starts, it uses a pre-warmed VM from the pool, drastically reducing cluster startup time.",
+      "difficulty": 3
+    },
+    {
+      "id": 107,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "Different ways to trigger a Databricks Job run include which of the following options?",
+      "options": {
+        "A": "Continuous and incremental",
+        "B": "On-demand and file notification",
+        "C": "Cron schedule and on-demand (manual) runs",
+        "D": "Cron and file notification",
+        "E": "Once and continuous"
+      },
+      "correct": "C",
+      "explanation": "Databricks Jobs can be triggered either on a cron schedule (time-based) or manually (on-demand). File arrival triggers and continuous mode are features of DLT and streaming, not standard Jobs scheduling.",
+      "difficulty": 3
+    },
+    {
+      "id": 108,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "Which location in the Databricks UI allows a data engineer to analyze slow Job performance over the past 60 days?",
+      "options": {
+        "A": "Under the Jobs UI, select the job, and under Runs view active runs and last 60 days of run history",
+        "B": "Under the Jobs UI, select the job cluster, then access Spark UI",
+        "C": "Under Workspace logs",
+        "D": "Under the Compute UI",
+        "E": "Historical runs are only accessible via the REST API"
+      },
+      "correct": "A",
+      "explanation": "The Jobs UI provides a run history view showing completed runs, duration, success/failure status, and logs for up to 60 days, enabling performance trend analysis.",
+      "difficulty": 3
+    },
+    {
+      "id": 109,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "A manager wants a query to refresh every minute for exactly one week post-release, then stop automatically to avoid costs. What is the correct approach?",
+      "options": {
+        "A": "Set a DBU consumption limit on the SQL warehouse",
+        "B": "Set the refresh schedule to end after a certain number of refreshes",
+        "C": "It is impossible to guarantee costs will stop",
+        "D": "Limit the number of individuals who can manage the refresh schedule",
+        "E": "Set a refresh schedule end date in the query scheduler"
+      },
+      "correct": "E",
+      "explanation": "Databricks SQL query schedules support setting an end date/time. After the specified date, the schedule stops automatically without manual intervention.",
+      "difficulty": 3
+    },
+    {
+      "id": 110,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "A dashboard refreshes once daily. Which approach minimizes the SQL warehouse's running time between refreshes?",
+      "options": {
+        "A": "Ensure the dashboard's SQL warehouse matches the one used for ad-hoc queries",
+        "B": "Set the warehouse to serverless",
+        "C": "Enable the Auto Stop feature on the SQL warehouse",
+        "D": "Reduce the cluster size",
+        "E": "Ensure the dashboard's SQL warehouse differs from ad-hoc query warehouses"
+      },
+      "correct": "C",
+      "explanation": "Auto Stop automatically terminates the SQL warehouse after a configured period of inactivity, minimizing idle costs between scheduled refreshes.",
+      "difficulty": 3
+    },
+    {
+      "id": 111,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "How can you improve query performance when multiple users run concurrent parallel queries on a single SQL warehouse?",
+      "options": {
+        "A": "Turn on the Serverless feature",
+        "B": "Increase the maximum bound of the warehouse's scaling range (scale-out)",
+        "C": "Increase the cluster size from 2X-Small to 4XL (scale-up)",
+        "D": "Turn on Auto Stop",
+        "E": "Enable Serverless with a reliability-optimized policy"
+      },
+      "correct": "B",
+      "explanation": "For concurrent parallel queries, scaling out (more clusters) is the solution. Increasing max scaling range allows the warehouse to spin up additional clusters to handle concurrent queries.",
+      "difficulty": 3
+    },
+    {
+      "id": 112,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "A single sequential query is taking 30 minutes on a 2X-Small SQL warehouse. How should performance be improved?",
+      "options": {
+        "A": "Turn on Serverless",
+        "B": "Increase the maximum scaling range",
+        "C": "Increase the cluster size from 2X-Small to 4XL (scale-up)",
+        "D": "Turn on Auto Stop"
+      },
+      "correct": "C",
+      "explanation": "For a single slow sequential query, scaling up (larger cluster with more cores/memory) is the solution. Scale-out (more clusters) helps concurrent queries, not sequential single-query performance.",
+      "difficulty": 3
+    },
+    {
+      "id": 113,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "Which Git operation must be performed outside of Databricks Repos and cannot be done within the Repos interface?",
+      "options": {
+        "A": "Commit",
+        "B": "Pull",
+        "C": "Merge",
+        "D": "Clone"
+      },
+      "correct": "C",
+      "explanation": "Databricks Repos supports commit, push, pull, branch switching, and creating branches. Merge operations (especially conflict resolution during merges) must be performed in an external Git client or repository hosting service.",
+      "difficulty": 3
+    },
+    {
+      "id": 114,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "Which of the following methods can be used to reduce cluster costs for a job that runs infrequently?",
+      "options": {
+        "A": "Use an all-purpose cluster with auto-termination enabled",
+        "B": "Use job clusters that are created on demand and terminated when the job completes",
+        "C": "Use a high-concurrency cluster shared across multiple teams",
+        "D": "Enable cluster autoscaling with a minimum of 10 workers"
+      },
+      "correct": "B",
+      "explanation": "Job clusters are ephemeral — created when a job starts and terminated when it ends. This means you only pay for compute while the job runs, unlike all-purpose clusters which may sit idle.",
+      "difficulty": 3
+    },
+    {
+      "id": 115,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "A data engineer notices that a job's tasks run sequentially when they could run in parallel. Which configuration in Databricks Jobs enables parallel task execution?",
+      "options": {
+        "A": "Enable multi-cluster mode in the job settings",
+        "B": "Configure tasks with no mutual dependencies so they can run concurrently",
+        "C": "Increase the job cluster's number of worker nodes",
+        "D": "Use a high-concurrency all-purpose cluster"
+      },
+      "correct": "B",
+      "explanation": "Tasks in Databricks Jobs run in parallel when they have no dependency relationship between them. Structuring the DAG so independent tasks have no \"Depends On\" relationship enables parallel execution.",
+      "difficulty": 3
+    },
+    {
+      "id": 116,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "Which of the following best explains why Databricks recommends using job clusters over all-purpose clusters for automated production workloads?",
+      "options": {
+        "A": "Job clusters support more programming languages",
+        "B": "All-purpose clusters do not support Delta Lake",
+        "C": "Job clusters are created fresh for each run (no state contamination) and are terminated when done (lower cost)",
+        "D": "Job clusters have higher memory limits"
+      },
+      "correct": "C",
+      "explanation": "Job clusters provide isolation (fresh environment per run), cost efficiency (no idle time), and prevent state contamination between runs, making them ideal for production pipelines.",
+      "difficulty": 3
+    },
+    {
+      "id": 117,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "A data team wants to reduce project costs. Which of the following strategies would reduce compute costs?",
+      "options": {
+        "A": "Use an all-purpose cluster for all workloads",
+        "B": "Use job clusters for automated workloads and configure auto-termination on interactive clusters",
+        "C": "Increase cluster size to process faster",
+        "D": "Use more partitions to improve parallelism"
+      },
+      "correct": "B",
+      "explanation": "Job clusters auto-terminate after job completion. For interactive clusters, setting auto-termination prevents paying for idle compute. Both approaches significantly reduce unnecessary compute spend.",
+      "difficulty": 3
+    },
+    {
+      "id": 118,
+      "domainId": "production-pipelines",
+      "domainName": "Production Pipelines",
+      "text": "Which of the following is TRUE about Databricks SQL serverless warehouses?",
+      "options": {
+        "A": "Serverless warehouses are only available for streaming workloads",
+        "B": "Serverless warehouses eliminate the need to manage cluster infrastructure; Databricks handles compute provisioning automatically",
+        "C": "Serverless warehouses require a dedicated VPC",
+        "D": "Serverless warehouses do not support Delta Lake tables"
+      },
+      "correct": "B",
+      "explanation": "Serverless SQL warehouses are fully managed by Databricks — no VPC configuration, faster startup than classic warehouses, and automatic scaling. They are best for reducing operational overhead. ## Domain 5: Data Governance",
+      "difficulty": 3
+    },
+    {
+      "id": 119,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which of the following commands grants the necessary permission for a group called \"team\" to view existing tables in a database called \"customers\"?",
+      "options": {
+        "A": "GRANT VIEW ON CATALOG customers TO team;",
+        "B": "GRANT CREATE ON DATABASE customers TO team;",
+        "C": "GRANT USAGE ON CATALOG team TO customers;",
+        "D": "GRANT CREATE ON DATABASE team TO customers;",
+        "E": "GRANT USAGE ON DATABASE customers TO team;"
+      },
+      "correct": "E",
+      "explanation": "GRANT USAGE ON DATABASE/SCHEMA allows the grantee to see (navigate/list) the database and its tables without granting SELECT or write access.",
+      "difficulty": 3
+    },
+    {
+      "id": 120,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which of the following commands grants full privileges on the \"customers\" database to a \"team\" group?",
+      "options": {
+        "A": "GRANT USAGE ON DATABASE customers TO team;",
+        "B": "GRANT ALL PRIVILEGES ON DATABASE team TO customers;",
+        "C": "GRANT SELECT PRIVILEGES ON DATABASE customers TO teams;",
+        "D": "GRANT SELECT CREATE MODIFY USAGE PRIVILEGES ON DATABASE customers TO team;",
+        "E": "GRANT ALL PRIVILEGES ON DATABASE customers TO team;"
+      },
+      "correct": "E",
+      "explanation": "GRANT ALL PRIVILEGES ON object TO principal grants all applicable privileges (SELECT, MODIFY, CREATE, USAGE, etc.) on the specified object.",
+      "difficulty": 3
+    },
+    {
+      "id": 121,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "At which level does Unity Catalog manage permissions in the Databricks platform?",
+      "options": {
+        "A": "Workspace level",
+        "B": "Account level (across workspaces)",
+        "C": "Cloud storage level",
+        "D": "Data plane level",
+        "E": "Control plane level"
+      },
+      "correct": "B",
+      "explanation": "Unity Catalog operates at the Databricks account level, providing a single governance layer that spans multiple workspaces within the same account.",
+      "difficulty": 3
+    },
+    {
+      "id": 122,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which section of the Databricks UI is used to manage table permissions and grants?",
+      "options": {
+        "A": "User Settings",
+        "B": "Admin UI",
+        "C": "Workspace admin settings",
+        "D": "User access control lists",
+        "E": "Data Explorer (Catalog Explorer)"
+      },
+      "correct": "E",
+      "explanation": "The Data Explorer (now Catalog Explorer in newer versions) provides a UI for browsing catalog, schema, and table objects and managing permissions via a graphical interface.",
+      "difficulty": 3
+    },
+    {
+      "id": 123,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which of the following is NOT a privilege available in Unity Catalog?",
+      "options": {
+        "A": "SELECT",
+        "B": "MODIFY",
+        "C": "DELETE",
+        "D": "CREATE TABLE",
+        "E": "EXECUTE"
+      },
+      "correct": "C",
+      "explanation": "Unity Catalog privileges include SELECT, MODIFY (which covers updates and deletes on data), CREATE, USAGE, EXECUTE (for functions), READ VOLUME, WRITE VOLUME, etc. DELETE is not a separate privilege — data deletion is covered by MODIFY.",
+      "difficulty": 3
+    },
+    {
+      "id": 124,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which SQL command transfers ownership of a table to a group?",
+      "options": {
+        "A": "ALTER TABLE table_name OWNER TO 'group_name'",
+        "B": "TRANSFER OWNER table_name TO 'group_name'",
+        "C": "GRANT OWNER table_name TO 'group_name'",
+        "D": "ALTER OWNER ON table_name TO 'group_name'",
+        "E": "GRANT OWNER ON table_name TO 'group_name'"
+      },
+      "correct": "A",
+      "explanation": "In Databricks, table ownership is transferred using ALTER TABLE table_name OWNER TO principal (or ALTER TABLE ... SET OWNER TO ...).",
+      "difficulty": 3
+    },
+    {
+      "id": 125,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineer needs to mark a table as containing PII (Personally Identifiable Information) data. Which of the following approaches is correct in Unity Catalog?",
+      "options": {
+        "A": "Apply a table tag or comment indicating PII classification using ALTER TABLE ... SET TBLPROPERTIES",
+        "B": "Store PII tables in a separate DBFS location",
+        "C": "Create a separate catalog named \"PII\" and move all such tables there",
+        "D": "Grant restricted permissions to all users on the table"
+      },
+      "correct": "A",
+      "explanation": "In Unity Catalog (and Databricks SQL), you can use table tags (ALTER TABLE ... SET TAGS) or TBLPROPERTIES to add metadata like PII classification. Row-level security and column masking can then be applied on top.",
+      "difficulty": 3
+    },
+    {
+      "id": 126,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which of the following describes the three-level namespace used by Unity Catalog?",
+      "options": {
+        "A": "workspace.database.table",
+        "B": "catalog.schema.table",
+        "C": "metastore.catalog.table",
+        "D": "account.workspace.table",
+        "E": "catalog.database.view"
+      },
+      "correct": "B",
+      "explanation": "Unity Catalog uses a three-level namespace: catalog.schema.table (e.g., main.sales.orders). This replaces the two-level hive metastore namespace (database.table).",
+      "difficulty": 3
+    },
+    {
+      "id": 127,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which of the following is a true statement about the Unity Catalog metastore?",
+      "options": {
+        "A": "Each Databricks workspace has its own metastore",
+        "B": "There is exactly one metastore per Databricks account globally",
+        "C": "There can be one metastore per region within a Databricks account",
+        "D": "Metastores are created automatically for each catalog"
+      },
+      "correct": "C",
+      "explanation": "You can have one Unity Catalog metastore per Databricks account per cloud region. Multiple workspaces within the same region can share a single metastore.",
+      "difficulty": 3
+    },
+    {
+      "id": 128,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which feature of Unity Catalog enables tracking how data flows from source tables through transformations to downstream tables?",
+      "options": {
+        "A": "Audit logs",
+        "B": "Data lineage",
+        "C": "Delta Sharing",
+        "D": "Row-level security",
+        "E": "Cluster access control"
+      },
+      "correct": "B",
+      "explanation": "Unity Catalog automatically captures data lineage for tables and views, showing upstream and downstream dependencies so data engineers can understand data flow and impact of changes.",
+      "difficulty": 3
+    },
+    {
+      "id": 129,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which Unity Catalog feature enables sharing data with external organizations or across different cloud platforms without copying the data?",
+      "options": {
+        "A": "Data lineage",
+        "B": "Row-level security",
+        "C": "Delta Sharing",
+        "D": "Audit logs",
+        "E": "Column masking"
+      },
+      "correct": "C",
+      "explanation": "Delta Sharing is an open protocol for sharing live data securely with other organizations, even if they use different cloud providers or don't have Databricks. It is integrated with Unity Catalog.",
+      "difficulty": 3
+    },
+    {
+      "id": 130,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "How are audit logs stored in Unity Catalog when configured for compliance purposes?",
+      "options": {
+        "A": "Stored in the Unity Catalog metastore database tables",
+        "B": "Stored as JSON files in a cloud storage location configured in the account console",
+        "C": "Stored automatically in Delta tables in each workspace",
+        "D": "Stored only in the Databricks control plane and not accessible to customers"
+      },
+      "correct": "B",
+      "explanation": "Unity Catalog audit logs capture all data access events and are delivered as JSON files to a cloud storage location (S3, ADLS, GCS) configured by the account admin.",
+      "difficulty": 3
+    },
+    {
+      "id": 131,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A new data engineering team has been assigned to work on a project and needs access to an existing database. Which Unity Catalog object should be granted to the team so they can access data using physical objects like tables, while sharing across teams?",
+      "options": {
+        "A": "Grant access on the workspace",
+        "B": "Share the notebook with the team",
+        "C": "Grant the team USAGE on the database (schema) and SELECT on the tables",
+        "D": "Create a separate Unity Catalog metastore for the team"
+      },
+      "correct": "C",
+      "explanation": "In Unity Catalog, to share data between teams, you grant USAGE on the parent containers (catalog, schema) and SELECT (or other data-access privileges) on the specific tables. This is the multi-level permission model.",
+      "difficulty": 3
+    },
+    {
+      "id": 132,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "In Unity Catalog, which of the following SQL commands correctly describes how to retrieve the path/location of a database?",
+      "options": {
+        "A": "SHOW DATABASE customer360",
+        "B": "DESCRIBE DATABASE EXTENDED customer360",
+        "C": "LIST DATABASE customer360",
+        "D": "SHOW LOCATION customer360"
+      },
+      "correct": "B",
+      "explanation": "DESCRIBE DATABASE EXTENDED (or DESCRIBE SCHEMA EXTENDED) returns metadata about the database including its storage location/path, owner, and any comments.",
+      "difficulty": 3
+    },
+    {
+      "id": 133,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which of the following describes the behavior of GRANT ALL PRIVILEGES in Unity Catalog?",
+      "options": {
+        "A": "Grants only SELECT and MODIFY on all tables",
+        "B": "Grants all applicable privileges on the specified object to the specified principal",
+        "C": "Grants all privileges across the entire metastore",
+        "D": "Only applicable to catalog-level objects"
+      },
+      "correct": "B",
+      "explanation": "GRANT ALL PRIVILEGES ON object TO principal grants every privilege that is applicable to that specific object type (e.g., for a table: SELECT, MODIFY, CREATE, etc.).",
+      "difficulty": 3
+    },
+    {
+      "id": 134,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "In the context of Unity Catalog, which of the following roles has the highest level of administrative authority?",
+      "options": {
+        "A": "Workspace admin",
+        "B": "Catalog owner",
+        "C": "Metastore admin",
+        "D": "Schema owner",
+        "E": "Table owner"
+      },
+      "correct": "C",
+      "explanation": "The metastore admin has the highest authority in Unity Catalog — they can manage all catalogs, schemas, tables, users, and groups within the metastore. Workspace admins manage workspace-level settings but have more limited data governance scope. ## Section 6: Databricks Asset Bundles & CI/CD",
+      "difficulty": 3
+    },
+    {
+      "id": 135,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "What is the primary purpose of Databricks Asset Bundles (DAB)?",
+      "options": {
+        "A": "To provide a visual UI for creating Databricks jobs and pipelines",
+        "B": "To sync Git repositories directly into the Databricks workspace for notebook development",
+        "C": "To define and deploy Databricks projects — including code, jobs, pipelines, and configurations — as versioned YAML files enabling CI/CD workflows",
+        "D": "To replace Delta Live Tables with a YAML-based streaming framework"
+      },
+      "correct": "C",
+      "explanation": "DAB (now called Declarative Automation Bundles) is an infrastructure-as-code tool. It packages source files, job/pipeline definitions, and workspace configurations into a YAML-based project structure deployed via the Databricks CLI. It enables source control, code review, testing, and CI/CD — not UI-based development (A), not just notebook sync (B), and it complements rather than replaces DLT (D).",
+      "difficulty": 3
+    },
+    {
+      "id": 136,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which of the following best describes what a Databricks Asset Bundle contains?",
+      "options": {
+        "A": "Only Python notebooks and SQL scripts",
+        "B": "Only cluster configurations and compute settings",
+        "C": "Source files, resource definitions (jobs, pipelines), infrastructure configs, unit/integration tests, and environment target settings",
+        "D": "Only the databricks.yml configuration file"
+      },
+      "correct": "C",
+      "explanation": "A bundle is a complete project unit containing: cloud infrastructure configurations, source files (notebooks, scripts), resource definitions (jobs, pipelines, dashboards, MLflow components), unit and integration tests, and deployment targets. It is not limited to just notebooks (A), just clusters (B), or just a YAML file (D).",
+      "difficulty": 3
+    },
+    {
+      "id": 137,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineer wants to adopt CI/CD practices for deploying Databricks jobs across development, staging, and production workspaces. Which Databricks feature is the recommended approach?",
+      "options": {
+        "A": "Databricks Repos with Git branching",
+        "B": "Manual job creation via the Databricks UI in each workspace",
+        "C": "Databricks Asset Bundles with the Databricks CLI",
+        "D": "Terraform with the Databricks provider only"
+      },
+      "correct": "C",
+      "explanation": "Databricks officially recommends Asset Bundles (Declarative Automation Bundles) as the primary CI/CD approach. They natively support multiple deployment targets, YAML-defined resources, and integrate with GitHub Actions, Azure DevOps, and other CI/CD platforms. Repos (A) is for version controlling notebooks but doesn't manage job definitions or environments as code. Manual UI creation (B) is error-prone and not reproducible. Terraform (D) is a valid alternative but DAB is Databricks' native recommended solution.",
+      "difficulty": 3
+    },
+    {
+      "id": 138,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which top-level key in `databricks.yml` is the ONLY required field?",
+      "options": {
+        "A": "`targets`",
+        "B": "`resources`",
+        "C": "`bundle`",
+        "D": "`workspace`"
+      },
+      "correct": "C",
+      "explanation": "The `bundle` key is the only required top-level mapping in `databricks.yml`, and within it, the `name` field is required. All other keys — `targets`, `resources`, `workspace`, `variables`, `permissions` — are optional, though `targets` is strongly recommended for multi-environment deployments.",
+      "difficulty": 3
+    },
+    {
+      "id": 139,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineer is writing a `databricks.yml` file and wants to define three environments: `dev`, `staging`, and `prod`. Which top-level key should they use to define these environments?",
+      "options": {
+        "A": "`environments`",
+        "B": "`targets`",
+        "C": "`workspaces`",
+        "D": "`deployments`"
+      },
+      "correct": "B",
+      "explanation": "The `targets` key defines deployment target contexts. Each entry under `targets` represents a named environment with its own workspace settings, resource overrides, variables, and deployment mode. The key was previously called `environments` in older DAB versions, but the current (exam-relevant) name is `targets`.",
+      "difficulty": 3
+    },
+    {
+      "id": 140,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "In a `databricks.yml` file, a data engineer defines the following: ```yaml targets: dev: default: true mode: development prod: mode: production ``` What does `default: true` indicate on the `dev` target?",
+      "options": {
+        "A": "The dev target is the only target that can be deployed",
+        "B": "When running `databricks bundle deploy` without specifying a `--target`, the dev target is used automatically",
+        "C": "The dev target uses the default Databricks runtime version",
+        "D": "The dev target deploys to the default Databricks workspace configured in the CLI profile"
+      },
+      "correct": "B",
+      "explanation": "Setting `default: true` on a target means it is used when no `--target` flag is provided to CLI commands. Only one target can be set as default. It does not restrict which targets can be deployed (A), has nothing to do with runtime versions (C), or specifically mean the CLI profile workspace (D).",
+      "difficulty": 3
+    },
+    {
+      "id": 141,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which section of `databricks.yml` is used to specify the Workspace URL and file paths for the bundle deployment?",
+      "options": {
+        "A": "`bundle.host`",
+        "B": "`workspace`",
+        "C": "`resources.workspace`",
+        "D": "`targets.workspace_url`"
+      },
+      "correct": "B",
+      "explanation": "The `workspace` section defines connection details including `host` (URL), `profile`, `root_path`, `artifact_path`, `file_path`, and `state_path`. It can appear at the top level (default for all targets) and can be overridden per target within the `targets` section.",
+      "difficulty": 3
+    },
+    {
+      "id": 142,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineer writes the following in `databricks.yml`: ```yaml workspace: root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target} ``` What type of syntax is `${bundle.name}` and `${bundle.target}`?",
+      "options": {
+        "A": "Python f-string interpolation",
+        "B": "Jinja2 template variables",
+        "C": "Built-in DAB substitution variables",
+        "D": "Environment variable references"
+      },
+      "correct": "C",
+      "explanation": "The `${}` syntax in `databricks.yml` is DAB's built-in substitution system. Built-in substitutions include `${bundle.name}`, `${bundle.target}`, `${workspace.host}`, `${workspace.current_user.userName}`, and others. They are resolved at deploy time. Custom variables use `${var.variable_name}`. This is neither Python f-strings (A), Jinja2 (B), nor OS environment variables (D).",
+      "difficulty": 3
+    },
+    {
+      "id": 143,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "What is the correct syntax to reference a custom variable named `catalog_name` inside a `databricks.yml` file?",
+      "options": {
+        "A": "`$catalog_name`",
+        "B": "`$(var.catalog_name)`",
+        "C": "`${var.catalog_name}`",
+        "D": "`{{var.catalog_name}}`"
+      },
+      "correct": "C",
+      "explanation": "Custom variables defined in the `variables` section are referenced using the `${var.<variable_name>}` syntax. Built-in substitutions use `${<path>}` without the `var.` prefix (e.g., `${bundle.name}`). The other syntaxes are not valid in DAB YAML.",
+      "difficulty": 3
+    },
+    {
+      "id": 144,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineer wants to split their bundle configuration across multiple YAML files for better organization. Which top-level key in `databricks.yml` enables this?",
+      "options": {
+        "A": "`extends`",
+        "B": "`import`",
+        "C": "`include`",
+        "D": "`merge`"
+      },
+      "correct": "C",
+      "explanation": "The `include` key accepts a list of glob patterns pointing to additional YAML configuration files. Example: `include: - resources/*.yml`. All included files are merged at deploy time. This key can only be used at the top level, meaning included resources are available to all targets.",
+      "difficulty": 3
+    },
+    {
+      "id": 145,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineer runs `databricks bundle validate`. What does this command do?",
+      "options": {
+        "A": "Deploys the bundle to the default target workspace",
+        "B": "Runs all unit tests defined in the bundle",
+        "C": "Verifies the bundle configuration syntax against schema and outputs a summary of the bundle identity",
+        "D": "Creates a new bundle from a template"
+      },
+      "correct": "C",
+      "explanation": "`bundle validate` checks that the `databricks.yml` configuration is syntactically correct and valid against the resource schemas. It outputs the bundle name, target, workspace host, user, and path — but it does NOT deploy anything (A), run tests (B), or create a new bundle (D).",
+      "difficulty": 3
+    },
+    {
+      "id": 146,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which command would a data engineer use to deploy a bundle to the `prod` target?",
+      "options": {
+        "A": "`databricks bundle run --target prod`",
+        "B": "`databricks bundle deploy --target prod`",
+        "C": "`databricks bundle publish prod`",
+        "D": "`databricks bundle push --env prod`"
+      },
+      "correct": "B",
+      "explanation": "`databricks bundle deploy --target <name>` deploys the bundle to the specified target. The `--target` flag (or `-t`) accepts the target name as defined in the `targets` section. `bundle run` (A) triggers an already-deployed job/pipeline. `bundle publish` and `bundle push` are not valid commands.",
+      "difficulty": 3
+    },
+    {
+      "id": 147,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "What is the purpose of `databricks bundle plan`?",
+      "options": {
+        "A": "It creates a deployment plan file for manual review",
+        "B": "It shows what changes would be made by `bundle deploy` without actually deploying anything",
+        "C": "It schedules the bundle deployment to run at a specific time",
+        "D": "It generates a Terraform plan for the bundle resources"
+      },
+      "correct": "B",
+      "explanation": "`bundle plan` is a preview/dry-run command. It shows which resources would be created, updated, or deleted if you ran `bundle deploy` — without making any actual changes. This is useful for reviewing impacts before deployment. It is not a scheduling tool (C) and has nothing to do with Terraform (D).",
+      "difficulty": 3
+    },
+    {
+      "id": 148,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineer wants to permanently remove all deployed resources (jobs, pipelines, artifacts) for a bundle. Which command should they use?",
+      "options": {
+        "A": "`databricks bundle delete --all`",
+        "B": "`databricks bundle undeploy`",
+        "C": "`databricks bundle destroy`",
+        "D": "`databricks bundle remove --target prod`"
+      },
+      "correct": "C",
+      "explanation": "`databricks bundle destroy` permanently deletes all previously-deployed jobs, pipelines, clusters, and artifacts associated with the bundle in the target workspace. This action **cannot be undone**. It is the correct command for full teardown. The other options are not valid DAB commands.",
+      "difficulty": 3
+    },
+    {
+      "id": 149,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineer has an existing job in their Databricks workspace and wants to bring it under DAB management. Which command generates a YAML configuration from an existing workspace resource?",
+      "options": {
+        "A": "`databricks bundle import job --existing-job-id 12345`",
+        "B": "`databricks bundle generate job --existing-job-id 12345`",
+        "C": "`databricks bundle export --resource job`",
+        "D": "`databricks bundle init --from-job 12345`"
+      },
+      "correct": "B",
+      "explanation": "`databricks bundle generate job --existing-job-id <id>` (or `--existing-job-name`) auto-generates a YAML resource definition from an existing workspace job and places it in the bundle configuration. This is the migration path from manually-created jobs to DAB management. `bundle import` is not a valid command.",
+      "difficulty": 3
+    },
+    {
+      "id": 150,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "How does Databricks Asset Bundles (DAB) differ from Databricks Repos?",
+      "options": {
+        "A": "DAB manages notebook version control while Repos manages job deployments",
+        "B": "Repos syncs Git content (notebooks, code) into the workspace; DAB defines and deploys the entire project including jobs, pipelines, and infrastructure as code",
+        "C": "DAB requires Unity Catalog while Repos works with Hive Metastore",
+        "D": "They are interchangeable — both provide the same functionality"
+      },
+      "correct": "B",
+      "explanation": "Databricks Repos is a Git integration feature that syncs code (especially notebooks) from a Git repo into the Databricks workspace. It does not manage job definitions, cluster configs, or environment promotions. DAB manages the full project deployment — code AND infrastructure (jobs, pipelines, permissions, environment targeting). They are complementary: DAB can deploy code to workspace Repos paths, but their purposes are distinct. They are not interchangeable (D).",
+      "difficulty": 3
+    },
+    {
+      "id": 151,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A team has been creating Databricks jobs manually through the UI in each environment. What is a major disadvantage of this approach compared to using Databricks Asset Bundles?",
+      "options": {
+        "A": "Manual jobs run slower than DAB-deployed jobs",
+        "B": "Manual jobs cannot connect to Unity Catalog",
+        "C": "Job configurations are not versioned or tracked, leading to environment drift and no reproducibility",
+        "D": "Manual jobs do not support Delta Live Tables"
+      },
+      "correct": "C",
+      "explanation": "The core problem with manual UI-based job creation is that configurations are not stored in version control. This leads to: configuration drift between environments (dev job looks different from prod), no audit trail, no rollback capability, and difficulty reproducing deployments. DAB stores all configurations in Git-versioned YAML. Job performance (A), Unity Catalog connectivity (B), and DLT support (D) are unrelated to the deployment method.",
+      "difficulty": 3
+    },
+    {
+      "id": 152,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "Which of the following capabilities does Databricks Asset Bundles provide that Databricks Repos does NOT?",
+      "options": {
+        "A": "Viewing notebook change history",
+        "B": "Cloning a GitHub repository into the workspace",
+        "C": "Deploying job definitions, cluster configurations, and permissions across multiple environments using CLI commands",
+        "D": "Connecting a workspace to a GitHub or GitLab repository"
+      },
+      "correct": "C",
+      "explanation": "Repos provides Git sync (A, B, D) — viewing history, cloning repos, and connecting to Git providers. What Repos cannot do is define and deploy jobs, pipelines, cluster configs, environment-specific settings, and permissions as code across multiple workspaces. That is the domain of Asset Bundles.",
+      "difficulty": 3
+    },
+    {
+      "id": 153,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineering team wants to set up a GitHub Actions workflow that automatically validates and deploys a DAB bundle to staging when a pull request is opened against the `main` branch. What is the correct sequence of CLI commands in the workflow?",
+      "options": {
+        "A": "`bundle deploy → bundle validate → bundle run`",
+        "B": "`bundle init → bundle deploy → bundle validate`",
+        "C": "`bundle validate → bundle deploy --target staging`",
+        "D": "`bundle plan → bundle init → bundle deploy`"
+      },
+      "correct": "C",
+      "explanation": "The standard CI/CD sequence is: first `bundle validate` (check config is correct), then `bundle deploy --target <env>` (deploy to the environment). `bundle run` (A) executes an already-deployed resource. `bundle init` (B, D) is a one-time scaffolding command not used in ongoing CI/CD pipelines. The validate-then-deploy sequence is the recommended pattern.",
+      "difficulty": 3
+    },
+    {
+      "id": 154,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "In a CI/CD pipeline for Databricks Asset Bundles, what is the recommended authentication method for production deployments?",
+      "options": {
+        "A": "Hardcoded personal access tokens (PATs) in the workflow YAML",
+        "B": "Username and password stored as GitHub secrets",
+        "C": "Workload Identity Federation using a service principal (no secrets required)",
+        "D": "OAuth U2M (User-to-Machine) authentication"
+      },
+      "correct": "C",
+      "explanation": "Databricks recommends Workload Identity Federation for CI/CD authentication. It uses OIDC tokens (no long-lived secrets needed), authenticates via `DATABRICKS_AUTH_TYPE: github-oidc` with a service principal's client ID. This is more secure than PATs (A) or passwords (B). OAuth U2M (D) is for interactive/human use, not automated pipelines.",
+      "difficulty": 3
+    },
+    {
+      "id": 155,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "When `mode: development` is set on a deployment target in `databricks.yml`, which of the following behaviors is automatically applied?",
+      "options": {
+        "A": "All job schedules run immediately and continuously",
+        "B": "All schedules and triggers are PAUSED, resources are prefixed with `[dev username]`, and concurrent runs are enabled",
+        "C": "The bundle is deployed to all targets simultaneously",
+        "D": "DLT pipelines are set to `continuous: true` automatically"
+      },
+      "correct": "B",
+      "explanation": "Development mode applies these automatic behaviors: (1) prepends `[dev <short_name>]` to resource names, (2) adds `dev` tag, (3) PAUSES all schedules and triggers, (4) enables concurrent job runs, and (5) sets DLT pipelines to `development: true`. Schedules are paused (not running continuously as in A). Bundles deploy to one target at a time (C). DLT `continuous` mode is not automatically enabled (D).",
+      "difficulty": 3
+    },
+    {
+      "id": 156,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineer defines the following in `databricks.yml`: ```yaml variables: env_name: default: development targets: prod: mode: production variables: env_name: production ``` When running `databricks bundle deploy --target prod`, what value will `${var.env_name}` resolve to?",
+      "options": {
+        "A": "`development` (the default always takes precedence)",
+        "B": "`production` (target-level variables override defaults)",
+        "C": "An error is thrown because the variable is defined twice",
+        "D": "`prod` (the target name is used automatically)"
+      },
+      "correct": "B",
+      "explanation": "Variable resolution follows a defined precedence order. Target-specific variables (defined within the `targets` section) override the top-level default values. So when deploying to `prod`, `${var.env_name}` resolves to `production`. The default `development` only applies when no higher-priority value exists. Defining the same variable in multiple places is normal and expected — not an error.",
+      "difficulty": 3
+    },
+    {
+      "id": 157,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "What is the purpose of the `lookup` field in a DAB variable definition?",
+      "options": {
+        "A": "It looks up the variable value from a secrets vault",
+        "B": "It allows the variable to reference another variable's value",
+        "C": "It automatically retrieves the ID of an existing workspace resource by name",
+        "D": "It looks up the current user's permissions for the resource"
+      },
+      "correct": "C",
+      "explanation": "The `lookup` field enables a variable to auto-resolve the ID of an existing workspace object by its name. For example, a variable with `lookup: { cluster: \"my-cluster\" }` automatically retrieves the cluster's ID. Supported types include clusters, jobs, pipelines, SQL warehouses, dashboards, and alerts. This is NOT a secrets lookup (A), cross-variable reference (B), or permissions check (D).",
+      "difficulty": 3
+    },
+    {
+      "id": 158,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A team wants a Databricks bundle job to run as a service principal in production, even though it was deployed by a human user. Which configuration achieves this?",
+      "options": {
+        "A": "Set the `--run-as` flag when running `databricks bundle deploy`",
+        "B": "Define `run_as: service_principal_name: prod-sp` in the production target configuration",
+        "C": "Grant the human user admin rights on the workspace",
+        "D": "Create a separate bundle specifically for service principal deployments"
+      },
+      "correct": "B",
+      "explanation": "The `run_as` configuration (either at the top level or within a specific target) specifies the identity (user or service principal) under which deployed jobs/pipelines execute. This separates the deploy identity from the run identity. Setting it in the `prod` target block means production deployments run as the service principal. The `--run-as` CLI flag does not exist (A). Admin rights (C) don't set the run identity. Separate bundles (D) are unnecessary for this use case.",
+      "difficulty": 3
+    },
+    {
+      "id": 159,
+      "domainId": "data-governance",
+      "domainName": "Data Governance",
+      "text": "A data engineer sets the following permissions in `databricks.yml`: ```yaml permissions: - level: CAN_MANAGE group_name: platform-team - level: CAN_VIEW group_name: data-consumers ``` What does this configuration achieve?",
+      "options": {
+        "A": "These permissions apply only to the `databricks.yml` file itself in Git",
+        "B": "The `platform-team` group gets full control and `data-consumers` can view all resources deployed by this bundle",
+        "C": "The permissions apply only to jobs, not pipelines",
+        "D": "This configuration is invalid — permissions can only be set per individual resource"
+      },
+      "correct": "B",
+      "explanation": "Top-level `permissions` in `databricks.yml` apply to ALL resources deployed by the bundle. `CAN_MANAGE` grants full control (edit, delete, run), `CAN_VIEW` allows viewing resource details. Permissions apply to all resource types including jobs, pipelines, dashboards, etc. (not just jobs as in C). They control Databricks workspace resources — not the Git file (A). Top-level permissions ARE valid syntax (D is wrong).",
+      "difficulty": 3
+    }
+  ]
+}
